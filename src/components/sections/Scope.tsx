@@ -1,18 +1,18 @@
 const scopeItems = [
   {
-    title: "No soy tramitador",
+    title: "Sí hago gestión comercial",
     description:
-      "No realizo trámites legales, administrativos, bancarios, notariales, de tránsito ni gestiones ante entidades por cuenta de las partes.",
+      "Busco prospectos, facilito el contacto entre las partes, reviso la información comercial disponible, coordino acercamientos, doy seguimiento y acompaño el proceso dentro del alcance acordado.",
   },
   {
-    title: "No soy comisionista",
+    title: "No realizo trámites especializados",
     description:
-      "Mi actividad se presenta como un servicio de gestión de negocios y conexión comercial, con honorarios previamente acordados por la gestión realizada.",
+      "No sustituyo a abogados, contadores, peritos, notarios, entidades financieras, autoridades de tránsito ni otros profesionales o entidades competentes.",
   },
   {
-    title: "Soy Gestor de Negocios",
+    title: "La verificación especializada corresponde a las partes",
     description:
-      "Mi función es gestionar oportunidades, generar conexiones y facilitar acercamientos comerciales entre las partes interesadas.",
+      "Las verificaciones jurídicas, financieras, contables, técnicas, notariales, peritajes y demás estudios especializados deben ser realizados directamente por las partes con los profesionales correspondientes.",
   },
 ];
 
@@ -43,12 +43,14 @@ export default function Scope() {
           </div>
 
           <h2 className="text-4xl font-semibold leading-[1.06] tracking-[-0.04em] text-[#0a0d12] sm:text-5xl md:text-6xl">
-            Qué hago y hasta dónde llega mi participación
+            Qué incluye mi participación y qué corresponde a terceros
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-[#5b6472] sm:text-lg">
-            Mi trabajo está enfocado en identificar oportunidades, generar
-            conexiones y facilitar el acercamiento comercial entre las partes.
+            Mi trabajo se enfoca en la gestión y conexión comercial. Acompaño el
+            proceso dentro del alcance acordado, sin reemplazar a los
+            profesionales o entidades que deben intervenir en verificaciones o
+            trámites especializados.
           </p>
         </div>
 
@@ -75,13 +77,14 @@ export default function Scope() {
 
         <div className="mt-12 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-            Gestor de Negocios
+            Importante
           </p>
 
           <p className="mt-3 max-w-3xl text-xl font-medium leading-8">
-            La gestión comercial facilita conexiones, pero las verificaciones,
-            trámites y asesorías especializadas corresponden a las partes y a los
-            profesionales o entidades competentes.
+            La revisión de información dentro de la gestión se refiere a la
+            información comercial suministrada y disponible para conocer la
+            oportunidad. No constituye una certificación jurídica, financiera,
+            contable, técnica o notarial.
           </p>
         </div>
       </div>
