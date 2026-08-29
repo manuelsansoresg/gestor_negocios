@@ -2,13 +2,12 @@ const opportunities = [
   "Inmuebles",
   "Empresas",
   "Negocios",
+  "Franquicias",
   "Maquinaria",
   "Vehículos",
+  "Muebles",
   "Inventarios",
-  "Franquicias",
-  "Proyectos inmobiliarios",
-  "Locales",
-  "Bodegas",
+  "Proyectos",
 ];
 
 export default function Contact() {
@@ -39,13 +38,13 @@ export default function Contact() {
             </div>
 
             <h2 className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl">
-              ¿Tienes una oportunidad de negocio?
+              ¿Qué quieres comprar o vender?
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-              Si tienes un activo, empresa, negocio, proyecto o servicio que
-              necesitas conectar con posibles compradores, inversionistas o
-              empresas interesadas, podemos revisar la oportunidad.
+              Cuéntame qué estás buscando o qué oportunidad quieres ofrecer.
+              Revisamos el caso y vemos cómo puedo ayudarte a conectar con
+              posibles interesados.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -60,8 +59,7 @@ export default function Contact() {
             </div>
 
             <p className="mt-10 max-w-2xl text-xl font-medium leading-8 text-white">
-              Puedo ayudarte a gestionar la oportunidad y conectarla con
-              potenciales interesados.
+              Si tienes una oportunidad, hablemos.
             </p>
           </div>
 
@@ -76,18 +74,18 @@ export default function Contact() {
               </h3>
 
               <p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">
-                Cuéntame brevemente qué oportunidad tienes, qué estás buscando
-                y cuál es el objetivo de la gestión.
+                Escríbeme y cuéntame brevemente qué quieres comprar, vender o
+                qué tipo de oportunidad estás buscando.
               </p>
 
               <div className="mt-8 space-y-3">
                 <a
-                  href="https://wa.me/573053971539?text=Hola%20David,%20tengo%20una%20oportunidad%20de%20negocio%20y%20me%20gustaría%20conocer%20más%20sobre%20tu%20servicio%20de%20gestión."
+                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
                   target="_blank"
                   rel="noreferrer"
                   className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
                 >
-                  Contactar por WhatsApp
+                  Hablar con David por WhatsApp
                 </a>
 
                 <a
@@ -100,8 +98,8 @@ export default function Contact() {
 
               <div className="mt-7 border-t border-white/10 pt-6">
                 <p className="text-xs leading-6 text-white/40">
-                  La información inicial permite conocer mejor la oportunidad
-                  antes de definir el alcance de la gestión.
+                  La información inicial me permite conocer la oportunidad y
+                  determinar cómo puedo ayudarte.
                 </p>
               </div>
             </div>
