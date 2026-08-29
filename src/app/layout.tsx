@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { site } from "@/data/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,44 +17,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://gestordenegocios.com"),
+  metadataBase: new URL(site.url),
 
   title: {
-    default: "Gestor de Negocios en Tuluá | David Aldana",
+    default: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
     template: "%s | David Aldana",
   },
 
-  description:
-    "David Aldana, gestor de negocios en Tuluá, Valle del Cauca. Te ayudo a comprar, vender o conectar oportunidades de negocio, inmuebles, empresas, franquicias, maquinaria, vehículos y más.",
-
-  keywords: [
-    "gestor de negocios en Tuluá",
-    "gestor de negocios Tuluá",
-    "gestor de negocios Valle del Cauca",
-    "gestor de negocios Colombia",
-    "comprar negocios en Tuluá",
-    "vender negocios en Tuluá",
-    "negocios en Tuluá",
-    "oportunidades de negocio Tuluá",
-    "venta de empresas Tuluá",
-    "compra de empresas Tuluá",
-    "inversionistas Tuluá",
-    "inversionistas Valle del Cauca",
-    "inmuebles Tuluá",
-    "franquicias Tuluá",
-    "maquinaria Tuluá",
-    "negocios Valle del Cauca",
-    "David Aldana gestor de negocios",
-  ],
+  description: site.description,
 
   authors: [
     {
-      name: "David Aldana",
+      name: site.ownerName,
+      url: site.url,
     },
   ],
 
-  creator: "David Aldana",
-  publisher: "David Aldana",
+  creator: site.ownerName,
+  publisher: site.ownerName,
 
   alternates: {
     canonical: "/",
@@ -65,24 +46,25 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 
   openGraph: {
-    title: "Gestor de Negocios en Tuluá | David Aldana",
-    description:
-      "Compra, vende o encuentra oportunidades de negocio en Tuluá y Valle del Cauca. Conexión comercial con compradores, vendedores e inversionistas.",
-    url: "https://gestordenegocios.com",
-    siteName: "David Aldana - Gestor de Negocios",
+    title: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
+    description: site.description,
+    url: site.url,
+    siteName: "David Aldana | Gestor de Negocios",
     locale: "es_CO",
     type: "website",
   },
 
   twitter: {
-    card: "summary_large_image",
-    title: "Gestor de Negocios en Tuluá | David Aldana",
-    description:
-      "Compra, vende o conecta oportunidades de negocio en Tuluá, Valle del Cauca.",
+    card: "summary",
+    title: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
+    description: site.description,
   },
 };
 

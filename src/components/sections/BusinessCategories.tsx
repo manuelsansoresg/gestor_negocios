@@ -3,13 +3,13 @@ const categories = [
     number: "01",
     title: "Inmuebles",
     description:
-      "Casas, apartamentos, lotes, fincas, locales, bodegas y propiedades comerciales.",
+      "Casas, apartamentos, lotes, fincas, locales comerciales, bodegas y otras propiedades comerciales.",
   },
   {
     number: "02",
     title: "Empresas y negocios",
     description:
-      "Empresas en funcionamiento, negocios establecidos y oportunidades empresariales.",
+      "Empresas y negocios en funcionamiento, oportunidades de compra y negocios en venta.",
   },
   {
     number: "03",
@@ -27,7 +27,7 @@ const categories = [
     number: "05",
     title: "Vehículos",
     description:
-      "Automóviles, camionetas, camiones, flotas y vehículos comerciales.",
+      "Automóviles, camionetas, camiones, flotas y vehículos comerciales o de trabajo.",
   },
   {
     number: "06",
@@ -39,7 +39,7 @@ const categories = [
     number: "07",
     title: "Inventarios y mercancía",
     description:
-      "Inventarios empresariales, liquidaciones, excedentes y lotes comerciales.",
+      "Inventarios empresariales, liquidaciones, excedentes y lotes de mercancía.",
   },
   {
     number: "08",
@@ -87,7 +87,8 @@ export default function BusinessCategories() {
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
             Puedo ayudarte a gestionar oportunidades de compra, venta o
-            inversión en diferentes tipos de activos, empresas y negocios.
+            inversión en Tuluá y el Valle del Cauca, en diferentes tipos de
+            activos, empresas y negocios.
           </p>
         </div>
 

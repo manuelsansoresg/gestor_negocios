@@ -7,10 +7,12 @@ import ValueProposition from "@/components/sections/ValueProposition";
 import Contact from "@/components/sections/Contact";
 import LegalNotice from "@/components/sections/LegalNotice";
 import Scope from "@/components/sections/Scope";
+import StructuredData from "@/components/seo/StructuredData";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Hero />
       <About />
       <BusinessCategories />

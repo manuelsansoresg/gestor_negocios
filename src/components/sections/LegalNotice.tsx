@@ -15,9 +15,9 @@ export default function LegalNotice() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
                 Aviso
-              </p>
+              </h2>
 
               <div className="mt-3 space-y-3 text-sm leading-7 text-white/45">
                 <p>

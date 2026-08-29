@@ -23,7 +23,7 @@ export default function Hero() {
             <span className="h-px w-9 bg-[#2878ff]" />
 
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
-              Gestor de Negocios en Tuluá
+              Compra · Venta · Inversión
             </span>
           </div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           <h1 className="text-4xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-5xl md:text-6xl lg:text-[4rem]">
-            ¿Quieres comprar o vender?
+            Gestor de Negocios en Tuluá
           </h1>
 
           <p className="mt-4 max-w-xl text-3xl font-semibold leading-[1.08] tracking-[-0.035em] text-[#68a0ff] sm:text-4xl lg:text-[3.25rem]">
@@ -74,10 +74,11 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0a0e16] p-2 shadow-[0_35px_100px_rgba(0,0,0,0.5)]">
             <Image
               src="/images/gestion-negocios-hero.jpg"
-              alt="Gestor de negocios en Tuluá conectando compradores, vendedores e inversionistas"
-              width={1100}
-              height={1400}
-              priority
+              alt="Diagrama de gestión de negocios que conecta propietarios con compradores, inversionistas y empresas"
+              width={1122}
+              height={1402}
+              sizes="(max-width: 640px) calc(100vw - 48px), 560px"
+              preload
               className="h-auto w-full rounded-[1.6rem] object-cover"
             />
           </div>

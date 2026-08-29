@@ -74,7 +74,7 @@ export default function Contact() {
               </h3>
 
               <p className="mt-2 text-sm font-medium text-[#68a0ff]">
-                Tuluá · Valle del Cauca
+                Tuluá · Valle del Cauca · Colombia
               </p>
 
               <p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">
