@@ -2,10 +2,10 @@ export default function LegalNotice() {
   return (
     <section
       id="aviso"
-      className="border-t border-white/10 bg-[#08101c] py-10 text-white"
+      className="border-t border-white/10 bg-[#08101c] py-7 text-white"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6 sm:p-7">
+        <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.025] p-5 sm:p-6">
           <div className="flex items-start gap-4">
             <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1668ff]/15 text-sm font-semibold text-[#68a0ff]">
               i
@@ -16,7 +16,7 @@ export default function LegalNotice() {
                 Aviso
               </p>
 
-              <div className="mt-4 space-y-4 text-sm leading-7 text-white/50">
+              <div className="mt-3 space-y-3 text-sm leading-7 text-white/45">
                 <p>
                   El servicio corresponde a gestión y conexión comercial. Las
                   partes son responsables de verificar la información,

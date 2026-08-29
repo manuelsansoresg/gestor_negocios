@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="inicio"
       className="relative overflow-hidden bg-[#05070b] text-white"
     >
       {/* Fondo decorativo */}
