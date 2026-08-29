@@ -82,7 +82,7 @@ export default function Contact() {
 
               <div className="mt-8 space-y-3">
                 <a
-                  href="https://wa.me/57XXXXXXXXXX"
+                  href="https://wa.me/573053971539?text=Hola%20David,%20tengo%20una%20oportunidad%20de%20negocio%20y%20me%20gustaría%20conocer%20más%20sobre%20tu%20servicio%20de%20gestión."
                   target="_blank"
                   rel="noreferrer"
                   className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
