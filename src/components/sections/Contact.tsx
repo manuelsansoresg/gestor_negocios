@@ -33,7 +33,7 @@ export default function Contact() {
               <span className="h-px w-9 bg-[#2878ff]" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
-                Contacto
+                Contacto · Tuluá
               </span>
             </div>
 
@@ -42,9 +42,9 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-              Cuéntame qué estás buscando o qué oportunidad quieres ofrecer.
-              Revisamos el caso y vemos cómo puedo ayudarte a conectar con
-              posibles interesados.
+              Si estás en Tuluá, Valle del Cauca, cuéntame qué estás buscando o
+              qué oportunidad quieres ofrecer. Revisamos el caso y vemos cómo
+              puedo ayudarte a conectar con posibles interesados.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -73,6 +73,10 @@ export default function Contact() {
                 Gestor de Negocios
               </h3>
 
+              <p className="mt-2 text-sm font-medium text-[#68a0ff]">
+                Tuluá · Valle del Cauca
+              </p>
+
               <p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">
                 Escríbeme y cuéntame brevemente qué quieres comprar, vender o
                 qué tipo de oportunidad estás buscando.
@@ -80,7 +84,7 @@ export default function Contact() {
 
               <div className="mt-8 space-y-3">
                 <a
-                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
+                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio%20en%20Tulu%C3%A1."
                   target="_blank"
                   rel="noreferrer"
                   className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"

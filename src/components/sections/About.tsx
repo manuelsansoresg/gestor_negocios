@@ -21,7 +21,7 @@ export default function About() {
               <span className="h-px w-9 bg-[#1668ff]" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#1668ff]">
-                Cómo puedo ayudarte
+                Gestión de negocios en Tuluá
               </span>
             </div>
 
@@ -30,9 +30,9 @@ export default function About() {
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              Si quieres vender un inmueble, negocio, empresa, vehículo,
-              maquinaria, franquicia u otro activo, puedo ayudarte a buscar
-              posibles interesados.
+              Si estás en Tuluá, Valle del Cauca, y quieres vender un inmueble,
+              negocio, empresa, vehículo, maquinaria, franquicia u otro activo,
+              puedo ayudarte a buscar posibles interesados.
             </p>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
@@ -41,8 +41,8 @@ export default function About() {
             </p>
 
             <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#0a0d12]">
-              Mi objetivo es sencillo: generar conexiones que puedan convertirse
-              en negocios concretados.
+              Mi objetivo es generar conexiones que puedan convertirse en
+              negocios concretados.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function About() {
 
               <div className="mt-5 rounded-2xl bg-[#07111f] p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5f94ff]">
-                  David Aldana
+                  David Aldana · Tuluá
                 </p>
 
                 <p className="mt-3 text-lg font-medium leading-7 text-white">
