@@ -6,6 +6,7 @@ import Fees from "@/components/sections/Fees";
 import ValueProposition from "@/components/sections/ValueProposition";
 import Contact from "@/components/sections/Contact";
 import LegalNotice from "@/components/sections/LegalNotice";
+import Scope from "@/components/sections/Scope";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HowItWorks />
       <Fees />
       <ValueProposition />
+      <Scope />
       <Contact />
       <LegalNotice />
     </>
