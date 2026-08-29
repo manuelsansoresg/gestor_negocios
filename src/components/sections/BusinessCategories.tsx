@@ -72,7 +72,7 @@ export default function BusinessCategories() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="max-w-3xl">
+        <div data-reveal className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-9 bg-[#2878ff]" />
 
@@ -92,9 +92,11 @@ export default function BusinessCategories() {
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <article
               key={category.number}
+              data-reveal="scale"
+              data-delay={String((index % 3) + 1)}
               className="group rounded-[1.75rem] border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#2878ff]/40 hover:bg-[#0d1627]"
             >
               <div className="flex items-start justify-between gap-4">
@@ -116,7 +118,10 @@ export default function BusinessCategories() {
           ))}
         </div>
 
-        <div className="mt-12 rounded-[2rem] border border-[#2878ff]/20 bg-[#0a1220] p-7 sm:p-9">
+        <div
+          data-reveal
+          className="mt-12 rounded-[2rem] border border-[#2878ff]/20 bg-[#0a1220] p-7 sm:p-9"
+        >
           <div className="grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">

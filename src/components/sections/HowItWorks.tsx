@@ -54,7 +54,7 @@ export default function HowItWorks() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div  data-reveal className="max-w-3xl">
+        <div data-reveal className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-9 bg-[#1668ff]" />
 
@@ -97,7 +97,10 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9">
+        <div
+          data-reveal
+          className="mt-14 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9"
+        >
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">

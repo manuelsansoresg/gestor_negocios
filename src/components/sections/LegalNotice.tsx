@@ -5,7 +5,10 @@ export default function LegalNotice() {
       className="border-t border-white/10 bg-[#08101c] py-7 text-white"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.025] p-5 sm:p-6">
+        <div
+          data-reveal="fade"
+          className="rounded-[1.5rem] border border-white/10 bg-white/[0.025] p-5 sm:p-6"
+        >
           <div className="flex items-start gap-4">
             <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1668ff]/15 text-sm font-semibold text-[#68a0ff]">
               i

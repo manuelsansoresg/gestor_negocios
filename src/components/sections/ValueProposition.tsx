@@ -60,7 +60,7 @@ export default function ValueProposition() {
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         {/* Encabezado */}
-        <div className="max-w-3xl">
+        <div data-reveal className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-9 bg-[#1668ff]" />
 
@@ -85,6 +85,8 @@ export default function ValueProposition() {
           {benefits.map((benefit, index) => (
             <article
               key={benefit.title}
+              data-reveal="scale"
+              data-delay={String((index % 4) + 1)}
               className="group rounded-[1.75rem] border border-[#e1e7f0] bg-white p-6 shadow-[0_15px_40px_rgba(17,24,39,0.04)] transition duration-300 hover:-translate-y-1 hover:border-[#1668ff]/25 hover:shadow-[0_20px_55px_rgba(17,24,39,0.07)]"
             >
               <div className="flex items-center justify-between">
@@ -107,7 +109,10 @@ export default function ValueProposition() {
         </div>
 
         {/* Bloque destacado */}
-        <div className="mt-14 overflow-hidden rounded-[2rem] bg-[#07111f] text-white">
+        <div
+          data-reveal
+          className="mt-14 overflow-hidden rounded-[2rem] bg-[#07111f] text-white"
+        >
           <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="p-7 sm:p-9 lg:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5f94ff]">

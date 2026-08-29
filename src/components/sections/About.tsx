@@ -16,7 +16,7 @@ export default function About() {
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-          <div>
+          <div data-reveal>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#1668ff]" />
 
@@ -46,7 +46,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="relative">
+          <div data-reveal="right" data-delay="1" className="relative">
             <div className="rounded-[2rem] border border-[#dbe3f0] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.06)] sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5">

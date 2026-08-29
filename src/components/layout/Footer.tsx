@@ -1,7 +1,10 @@
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#030508] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-12">
+      <div
+        data-reveal="fade"
+        className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-12"
+      >
         <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#68a0ff]">

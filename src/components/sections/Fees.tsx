@@ -64,7 +64,7 @@ export default function Fees() {
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-          <div>
+          <div data-reveal>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#2878ff]" />
 
@@ -96,7 +96,11 @@ export default function Fees() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-9">
+          <div
+            data-reveal="right"
+            data-delay="1"
+            className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-9"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
               Ejemplo
             </p>
@@ -153,7 +157,7 @@ export default function Fees() {
         </div>
 
         <div className="mt-20">
-          <div className="max-w-3xl">
+          <div data-reveal className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
               Qué incluye la gestión
             </p>
@@ -169,9 +173,11 @@ export default function Fees() {
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {managementIncludes.map((item) => (
+            {managementIncludes.map((item, index) => (
               <article
                 key={item.number}
+                data-reveal="scale"
+                data-delay={String((index % 3) + 1)}
                 className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:border-[#2878ff]/35 hover:bg-[#0d1627]"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#68a0ff]">
@@ -190,7 +196,10 @@ export default function Fees() {
           </div>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div
+          data-reveal
+          className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start"
+        >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
               El porcentaje puede variar
@@ -215,7 +224,10 @@ export default function Fees() {
           </div>
         </div>
 
-        <div className="mt-14 rounded-[2rem] border border-[#2878ff]/20 bg-[#0a1220] p-7 sm:p-9">
+        <div
+          data-reveal
+          className="mt-14 rounded-[2rem] border border-[#2878ff]/20 bg-[#0a1220] p-7 sm:p-9"
+        >
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">

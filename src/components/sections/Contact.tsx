@@ -28,7 +28,7 @@ export default function Contact() {
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
         <div className="grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:gap-20">
-          <div>
+          <div data-reveal="left">
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#2878ff]" />
 
@@ -63,7 +63,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="relative">
+          <div data-reveal="right" data-delay="1" className="relative">
             <div className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.4)] sm:p-9">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
                 David Aldana

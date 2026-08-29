@@ -33,7 +33,7 @@ export default function Scope() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="max-w-3xl">
+        <div data-reveal className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-9 bg-[#1668ff]" />
 
@@ -58,6 +58,8 @@ export default function Scope() {
           {scopeItems.map((item, index) => (
             <article
               key={item.title}
+              data-reveal="scale"
+              data-delay={String(index + 1)}
               className="rounded-[1.75rem] border border-[#e1e7f0] bg-white p-6 shadow-[0_15px_40px_rgba(17,24,39,0.04)] sm:p-7"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
@@ -75,7 +77,10 @@ export default function Scope() {
           ))}
         </div>
 
-        <div className="mt-12 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9">
+        <div
+          data-reveal
+          className="mt-12 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9"
+        >
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
             Importante
           </p>
