@@ -54,7 +54,7 @@ export default function HowItWorks() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="max-w-3xl">
+        <div  data-reveal className="max-w-3xl">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-9 bg-[#1668ff]" />
 
@@ -75,9 +75,11 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <article
               key={step.number}
+              data-reveal="scale"
+              data-delay={String((index % 3) + 1)}
               className="rounded-[1.75rem] border border-[#e1e7f0] bg-white p-6 shadow-[0_15px_40px_rgba(17,24,39,0.04)] transition duration-300 hover:-translate-y-1 hover:border-[#1668ff]/25 hover:shadow-[0_20px_55px_rgba(17,24,39,0.07)] sm:p-7"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">

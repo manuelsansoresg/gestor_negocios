@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className="mx-auto grid min-h-[calc(100vh-78px)] max-w-7xl items-center gap-12 px-6 py-14 md:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-12 lg:py-16">
         {/* Contenido */}
-        <div className="relative z-10 max-w-2xl">
+        <div className="hero-content relative z-10 max-w-2xl">
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-9 bg-[#2878ff]" />
 
@@ -65,7 +65,7 @@ export default function Hero() {
         </div>
 
         {/* Imagen */}
-        <div className="relative z-10 mx-auto w-full max-w-[560px]">
+        <div className="hero-image relative z-10 mx-auto w-full max-w-[560px]">
           <div
             aria-hidden="true"
             className="absolute inset-10 rounded-[2rem] bg-[#1265ff]/15 blur-[70px]"
