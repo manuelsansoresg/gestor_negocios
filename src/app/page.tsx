@@ -8,6 +8,7 @@ import Fees from "@/components/sections/Fees";
 import ValueProposition from "@/components/sections/ValueProposition";
 import Results from "@/components/sections/Results";
 import Scope from "@/components/sections/Scope";
+import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import LegalNotice from "@/components/sections/LegalNotice";
 import StructuredData from "@/components/seo/StructuredData";
@@ -36,6 +37,8 @@ export default function Home() {
       <Results />
 
       <Scope />
+
+      <Testimonials />
 
       <Contact />
 

@@ -88,10 +88,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs leading-6 text-white/35">
-          Los testimonios mostrados deben corresponder a experiencias reales
-          y autorizadas por cada cliente.
-        </p>
+        
       </div>
     </section>
   );
