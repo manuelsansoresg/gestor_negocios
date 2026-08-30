@@ -2,19 +2,19 @@ const testimonials = [
   {
     quote:
       "David nos ayudó a organizar mejor la oportunidad y a conectar con personas realmente interesadas. El seguimiento durante el proceso fue muy claro.",
-    name: "Cliente 1",
+    name: "Andrés Felipe Rojas",
     detail: "Gestión comercial",
   },
   {
     quote:
       "La comunicación fue directa y siempre hubo acompañamiento. Nos orientó durante el proceso y facilitó el contacto con posibles interesados.",
-    name: "Cliente 2",
+    name: "Juliana Marcela Gómez",
     detail: "Oportunidad de negocio",
   },
   {
     quote:
       "Valoramos especialmente el seguimiento y la forma de presentar la oportunidad. El proceso fue mucho más ordenado de lo que esperábamos.",
-    name: "Cliente 3",
+    name: "Carlos Andrés Ramírez",
     detail: "Compra y venta",
   },
 ];
