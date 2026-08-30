@@ -15,34 +15,34 @@ const managementIncludes = [
     number: "03",
     title: "Revisión de información",
     description:
-      "Reviso la información comercial disponible para entender mejor la oportunidad y presentarla de forma clara a los posibles interesados.",
+      "Reviso la información comercial disponible para entender mejor la oportunidad y presentarla de forma clara.",
   },
   {
     number: "04",
-    title: "Coordinación de negociaciones",
+    title: "Coordinación comercial",
     description:
-      "Apoyo la comunicación entre las partes y coordino los acercamientos necesarios durante el proceso de negociación.",
+      "Apoyo la comunicación y coordino los acercamientos necesarios durante el proceso.",
   },
   {
     number: "05",
     title: "Seguimiento",
     description:
-      "Doy continuidad a las conversaciones y al proceso comercial para mantener activa la oportunidad.",
+      "Doy continuidad a las conversaciones para mantener activa la oportunidad.",
   },
   {
     number: "06",
-    title: "Acompañamiento comercial",
+    title: "Acompañamiento",
     description:
-      "Acompaño la gestión hasta el punto acordado con el cliente, facilitando la comunicación y el avance de la operación.",
+      "Acompaño la gestión hasta el punto previamente acordado con el cliente.",
   },
 ];
 
 const factors = [
   "Tipo de operación",
-  "Valor de la operación",
+  "Valor",
   "Complejidad",
-  "Tiempo de gestión",
-  "Alcance acordado",
+  "Tiempo",
+  "Alcance",
   "Condiciones particulares",
 ];
 
@@ -57,13 +57,8 @@ export default function Fees() {
         className="absolute left-[-8rem] top-10 h-80 w-80 rounded-full bg-[#1668ff]/10 blur-[120px]"
       />
 
-      <div
-        aria-hidden="true"
-        className="absolute bottom-0 right-[-10rem] h-96 w-96 rounded-full bg-[#0b4dcc]/10 blur-[130px]"
-      />
-
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
           <div data-reveal>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#2878ff]" />
@@ -74,84 +69,64 @@ export default function Fees() {
             </div>
 
             <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl">
-              Honorarios calculados sobre el valor de la operación concretada
+              Honorarios personalizados
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-white/60 sm:text-lg">
-              El porcentaje y las condiciones de la gestión se acuerdan
-              previamente con el cliente, de acuerdo con el tipo de operación,
-              su valor, complejidad y alcance.
+              Cada operación tiene un porcentaje definido previamente según su
+              valor, complejidad, tiempo y alcance de la gestión.
             </p>
 
-            <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-                Importante
-              </p>
-
-              <p className="mt-3 text-sm leading-7 text-white/55">
-                Los honorarios corresponden al servicio de gestión comercial
-                acordado y no únicamente a presentar o poner en contacto a las
-                partes.
-              </p>
-            </div>
+            <p className="mt-5 max-w-xl text-base leading-8 text-white/50">
+              Antes de iniciar, acordamos las condiciones para que tengas
+              claridad sobre el servicio y los honorarios.
+            </p>
           </div>
 
           <div
             data-reveal="right"
             data-delay="1"
-            className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:p-9"
+            className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 sm:p-9"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-              Ejemplo
+              Ejemplo ilustrativo
             </p>
 
-            <p className="mt-3 text-sm leading-6 text-white/45">
-              Si se concreta una operación por:
+            <p className="mt-5 text-sm text-white/55">
+              Operación concretada por
             </p>
 
-            <div className="mt-5 rounded-2xl border border-white/10 bg-[#07111f] p-5">
-              <p className="text-sm text-white/45">
-                Valor de la operación
-              </p>
+            <p className="mt-2 text-3xl font-semibold text-white">
+              $100.000.000 COP
+            </p>
 
-              <p className="mt-2 text-3xl font-semibold tracking-[-0.03em] text-white">
-                $100.000.000
-              </p>
+            <div className="mt-6 border-t border-white/10 pt-6">
+              <div className="flex items-end justify-between gap-6">
+                <div>
+                  <p className="text-sm text-white/55">
+                    Porcentaje acordado
+                  </p>
 
-              <p className="mt-1 text-sm text-white/40">
-                COP
-              </p>
-            </div>
+                  <p className="mt-2 text-2xl font-semibold text-[#68a0ff]">
+                    8%
+                  </p>
+                </div>
 
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-5">
-                <p className="text-sm text-white/40">
-                  Honorario acordado
-                </p>
+                <div className="text-right">
+                  <p className="text-sm text-white/55">
+                    Honorario de gestión
+                  </p>
 
-                <p className="mt-2 text-3xl font-semibold text-[#68a0ff]">
-                  8%
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-[#2878ff]/25 bg-[#0b1628] p-5">
-                <p className="text-sm text-white/40">
-                  Honorarios de gestión
-                </p>
-
-                <p className="mt-2 text-3xl font-semibold text-white">
-                  $8.000.000
-                </p>
-
-                <p className="mt-1 text-sm text-white/40">
-                  COP
-                </p>
+                  <p className="mt-2 text-2xl font-semibold">
+                    $8.000.000
+                  </p>
+                </div>
               </div>
             </div>
 
-            <p className="mt-5 text-xs leading-6 text-white/35">
-              Este ejemplo es ilustrativo. El porcentaje puede variar según las
-              condiciones de cada oportunidad y el alcance de la gestión.
+            <p className="mt-6 text-xs leading-6 text-white/55">
+              El 8% es únicamente un ejemplo. No representa una tarifa fija
+              para todas las operaciones.
             </p>
           </div>
         </div>
@@ -159,17 +134,12 @@ export default function Fees() {
         <div className="mt-20">
           <div data-reveal className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-              Qué incluye la gestión
+              Qué incluye
             </p>
 
             <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
-              Un servicio comercial más completo que una simple conexión
+              El honorario corresponde a una gestión, no solamente a un contacto
             </h3>
-
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/55">
-              Dependiendo de la oportunidad y del alcance acordado, la gestión
-              puede incluir las siguientes actividades:
-            </p>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -184,7 +154,7 @@ export default function Fees() {
                   {item.number}
                 </span>
 
-                <h4 className="mt-5 text-xl font-semibold tracking-[-0.02em] text-white">
+                <h4 className="mt-5 text-xl font-semibold">
                   {item.title}
                 </h4>
 
@@ -198,15 +168,15 @@ export default function Fees() {
 
         <div
           data-reveal
-          className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start"
+          className="mt-16 grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 sm:p-9 lg:grid-cols-[0.75fr_1.25fr]"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-              El porcentaje puede variar
+              Cada caso es diferente
             </p>
 
-            <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">
-              Cada operación tiene condiciones diferentes
+            <h3 className="mt-4 text-2xl font-semibold">
+              El porcentaje puede variar
             </h3>
           </div>
 
@@ -214,48 +184,19 @@ export default function Fees() {
             {factors.map((factor) => (
               <div
                 key={factor}
-                className="rounded-2xl border border-white/10 bg-white/[0.025] px-5 py-4"
+                className="rounded-xl border border-white/10 px-4 py-3 text-sm text-white/60"
               >
-                <p className="text-sm font-medium text-white/65">
-                  {factor}
-                </p>
+                {factor}
               </div>
             ))}
           </div>
         </div>
 
-        <div
-          data-reveal
-          className="mt-14 rounded-[2rem] border border-[#2878ff]/20 bg-[#0a1220] p-7 sm:p-9"
-        >
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-                Antes de iniciar
-              </p>
-
-              <p className="mt-3 max-w-3xl text-xl font-medium leading-8 text-white">
-                El porcentaje, el alcance del servicio y las condiciones de la
-                gestión se definen previamente para que ambas partes tengan
-                claridad desde el inicio.
-              </p>
-            </div>
-
-            <a
-              href="#contacto"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#1668ff] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
-            >
-              Consultar mi caso
-            </a>
-          </div>
-        </div>
-
         <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-6">
-          <p className="text-sm leading-7 text-white/40">
-            La revisión de información dentro de la gestión corresponde a la
-            información comercial suministrada y disponible para conocer la
-            oportunidad. Las verificaciones jurídicas, financieras, contables,
-            técnicas, notariales, peritajes o demás estudios especializados
+          <p className="text-sm leading-7 text-white/55">
+            La revisión de información corresponde a la información comercial
+            disponible. Las verificaciones jurídicas, financieras, contables,
+            técnicas, notariales, peritajes u otros estudios especializados
             corresponden a las partes y a los profesionales o entidades
             competentes.
           </p>

@@ -1,3 +1,30 @@
+const actions = [
+  {
+    number: "01",
+    title: "Analizo tu oportunidad",
+    description:
+      "Conozco qué quieres comprar, vender o gestionar y reviso la información comercial disponible.",
+  },
+  {
+    number: "02",
+    title: "Identifico el perfil adecuado",
+    description:
+      "Defino qué tipo de comprador, vendedor, inversionista o empresa puede tener interés.",
+  },
+  {
+    number: "03",
+    title: "Busco posibles interesados",
+    description:
+      "Amplío el alcance de la oportunidad buscando prospectos que puedan encajar con la operación.",
+  },
+  {
+    number: "04",
+    title: "Genero la conexión",
+    description:
+      "Facilito el acercamiento para que las partes puedan conocer, evaluar y avanzar en la oportunidad.",
+  },
+];
+
 export default function About() {
   return (
     <section
@@ -21,103 +48,64 @@ export default function About() {
               <span className="h-px w-9 bg-[#1668ff]" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#1668ff]">
-                Gestión de negocios en Tuluá
+                Gestión de oportunidades
               </span>
             </div>
 
             <h2 className="max-w-xl text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#0a0d12] sm:text-5xl">
-              Te ayudo a conectar una oportunidad con la persona indicada
+              Tú tienes la oportunidad. Mi trabajo es ayudar a moverla.
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              Si estás en Tuluá, Valle del Cauca, y quieres vender un inmueble,
-              negocio, empresa, vehículo, maquinaria, franquicia u otro activo,
-              puedo ayudarte a buscar posibles interesados.
+              Si quieres vender un inmueble, negocio, empresa, vehículo,
+              maquinaria, franquicia u otro activo, puedo ayudarte a buscar
+              posibles compradores en Tuluá, el Valle del Cauca y otras zonas
+              de Colombia.
             </p>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              Y si estás buscando comprar o invertir, también puedo ayudarte a
-              identificar oportunidades y generar el contacto entre las partes.
+              Y si estás buscando comprar o invertir, puedo ayudarte a
+              identificar empresas, negocios en funcionamiento y oportunidades
+              que correspondan con lo que necesitas.
             </p>
 
             <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#0a0d12]">
-              Mi objetivo es generar conexiones que puedan convertirse en
-              negocios concretados.
+              El objetivo no es entregar un contacto, sino gestionar una
+              oportunidad comercial con seguimiento y claridad.
             </p>
           </div>
 
           <div data-reveal="right" data-delay="1" className="relative">
             <div className="rounded-[2rem] border border-[#dbe3f0] bg-white p-6 shadow-[0_20px_60px_rgba(17,24,39,0.06)] sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
-                    01
-                  </div>
+                {actions.map((action) => (
+                  <article
+                    key={action.number}
+                    className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
+                      {action.number}
+                    </div>
 
-                  <h3 className="mt-4 text-lg font-semibold text-[#0a0d12]">
-                    Cuéntame qué buscas
-                  </h3>
+                    <h3 className="mt-4 text-lg font-semibold text-[#0a0d12]">
+                      {action.title}
+                    </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-[#667085]">
-                    Puede ser algo que quieres vender, comprar o una oportunidad
-                    de inversión.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
-                    02
-                  </div>
-
-                  <h3 className="mt-4 text-lg font-semibold text-[#0a0d12]">
-                    Reviso la oportunidad
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-[#667085]">
-                    Conozco sus características y las condiciones principales
-                    del negocio.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
-                    03
-                  </div>
-
-                  <h3 className="mt-4 text-lg font-semibold text-[#0a0d12]">
-                    Busco interesados
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-[#667085]">
-                    Compradores, vendedores, inversionistas o empresas según la
-                    oportunidad.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-[#e6ebf3] bg-[#f9fbff] p-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1668ff]/10 text-sm font-semibold text-[#1668ff]">
-                    04
-                  </div>
-
-                  <h3 className="mt-4 text-lg font-semibold text-[#0a0d12]">
-                    Genero la conexión
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-[#667085]">
-                    Facilito el acercamiento para que las partes puedan evaluar
-                    y negociar.
-                  </p>
-                </div>
+                    <p className="mt-2 text-sm leading-6 text-[#667085]">
+                      {action.description}
+                    </p>
+                  </article>
+                ))}
               </div>
 
               <div className="mt-5 rounded-2xl bg-[#07111f] p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5f94ff]">
-                  David Aldana · Tuluá
+                  David Aldana · Gestor de Negocios
                 </p>
 
                 <p className="mt-3 text-lg font-medium leading-7 text-white">
-                  Conectando personas que tienen una oportunidad con personas
-                  que están buscando una.
+                  Conectando oportunidades con personas que pueden tener un
+                  interés real en ellas.
                 </p>
               </div>
             </div>

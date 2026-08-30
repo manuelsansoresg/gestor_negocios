@@ -5,7 +5,7 @@ export const site = {
   domain: "GESTORDENEGOCIOS.COM",
   url: "https://gestordenegocios.com",
   description:
-    "David Aldana, gestor de negocios en Tuluá. Conecta oportunidades de compra, venta e inversión en empresas, inmuebles, maquinaria y más en Valle del Cauca.",
+    "David Aldana conecta vendedores, compradores e inversionistas en negocios, empresas, inmuebles, maquinaria, vehículos y franquicias desde Tuluá para Colombia.",
   phone: "+573053971539",
   email: "davidaldana97@hotmail.com",
   location: {

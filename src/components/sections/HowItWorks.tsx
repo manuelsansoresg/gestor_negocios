@@ -1,39 +1,39 @@
 const steps = [
   {
     number: "01",
-    title: "Recibo la oportunidad",
+    title: "Analizo tu oportunidad",
     description:
-      "Me compartes la información inicial sobre lo que quieres comprar, vender o gestionar.",
+      "Conozco lo que quieres comprar, vender o gestionar y reviso la información comercial disponible.",
   },
   {
     number: "02",
-    title: "Reviso la información",
+    title: "Identifico posibles interesados",
     description:
-      "Analizo la información comercial disponible para entender mejor la oportunidad, sus condiciones y el perfil de posibles interesados.",
+      "Defino qué perfil de comprador, vendedor, inversionista o empresa puede tener mayor afinidad con la oportunidad.",
   },
   {
     number: "03",
-    title: "Identifico prospectos",
+    title: "Busco y filtro prospectos",
     description:
-      "Busco compradores, vendedores, inversionistas, empresas u otras partes que puedan tener interés real en la oportunidad.",
+      "Busco posibles interesados y priorizo aquellos que pueden tener una relación real con la operación.",
   },
   {
     number: "04",
     title: "Genero la conexión",
     description:
-      "Facilito el contacto y el acercamiento entre las partes para que puedan conocer la oportunidad y evaluar si existe interés.",
+      "Facilito el contacto y el acercamiento para que las partes puedan conocer y evaluar la oportunidad.",
   },
   {
     number: "05",
-    title: "Coordino el proceso comercial",
+    title: "Coordino el acercamiento",
     description:
-      "Apoyo la comunicación entre las partes y coordino los acercamientos necesarios durante la negociación.",
+      "Apoyo la comunicación y la coordinación necesaria mientras las partes avanzan en el proceso comercial.",
   },
   {
     number: "06",
-    title: "Doy seguimiento y acompañamiento",
+    title: "Doy seguimiento",
     description:
-      "Mantengo continuidad en el proceso y acompaño la gestión comercial hasta el punto previamente acordado con el cliente.",
+      "Mantengo continuidad y acompaño la gestión comercial hasta el punto previamente acordado con el cliente.",
   },
 ];
 
@@ -68,9 +68,9 @@ export default function HowItWorks() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-[#5b6472] sm:text-lg">
-            Cada oportunidad puede ser distinta, pero el proceso busca mantener
-            claridad desde el inicio y facilitar el avance comercial entre las
-            partes.
+            Cada oportunidad tiene condiciones diferentes, pero la gestión
+            mantiene un proceso definido para buscar, conectar y dar
+            seguimiento.
           </p>
         </div>
 
@@ -104,13 +104,13 @@ export default function HowItWorks() {
           <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-                Acompañamiento comercial
+                Seguimiento comercial
               </p>
 
               <p className="mt-3 max-w-3xl text-xl font-medium leading-8">
-                La gestión no termina al generar un contacto. El seguimiento,
-                la coordinación y el acompañamiento forman parte del servicio
-                cuando así se haya definido en el alcance acordado.
+                La gestión no termina cuando aparece un contacto. El seguimiento
+                y la coordinación continúan dentro del alcance acordado para
+                mantener activa la oportunidad.
               </p>
             </div>
 
@@ -125,11 +125,10 @@ export default function HowItWorks() {
 
         <div className="mt-8 rounded-[1.5rem] border border-[#dbe3f0] bg-white p-6">
           <p className="text-sm leading-7 text-[#667085]">
-            La revisión de información dentro de la gestión corresponde a la
-            información comercial disponible. Las verificaciones jurídicas,
-            financieras, contables, técnicas, notariales o especializadas deben
-            ser realizadas por las partes y por los profesionales o entidades
-            competentes.
+            La revisión de información corresponde a la información comercial
+            disponible. Las verificaciones jurídicas, financieras, contables,
+            técnicas, notariales o especializadas corresponden a las partes y a
+            los profesionales o entidades competentes.
           </p>
         </div>
       </div>

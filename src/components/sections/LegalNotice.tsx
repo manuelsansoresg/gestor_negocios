@@ -19,7 +19,7 @@ export default function LegalNotice() {
                 Aviso
               </h2>
 
-              <div className="mt-3 space-y-3 text-sm leading-7 text-white/45">
+              <div className="mt-3 space-y-3 text-sm leading-7 text-white/55">
                 <p>
                   El servicio corresponde a gestión y conexión comercial. Las
                   partes son responsables de verificar la información,

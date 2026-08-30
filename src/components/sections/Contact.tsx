@@ -42,9 +42,9 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-              Si estás en Tuluá, Valle del Cauca, cuéntame qué estás buscando o
-              qué oportunidad quieres ofrecer. Revisamos el caso y vemos cómo
-              puedo ayudarte a conectar con posibles interesados.
+              Desde Tuluá, Valle del Cauca, gestiono oportunidades con alcance
+              en Colombia. Cuéntame qué estás buscando o qué quieres vender y
+              revisamos cómo conectar con posibles interesados.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -84,9 +84,9 @@ export default function Contact() {
 
               <div className="mt-8 space-y-3">
                 <a
-                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio%20en%20Tulu%C3%A1."
+                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
                 >
                   Hablar con David por WhatsApp
@@ -101,7 +101,7 @@ export default function Contact() {
               </div>
 
               <div className="mt-7 border-t border-white/10 pt-6">
-                <p className="text-xs leading-6 text-white/40">
+                <p className="text-xs leading-6 text-white/55">
                   La información inicial me permite conocer la oportunidad y
                   determinar cómo puedo ayudarte.
                 </p>

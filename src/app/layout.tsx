@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -11,16 +11,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
 
   title: {
-    default: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
+    default: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
     template: "%s | David Aldana",
   },
 
@@ -53,7 +48,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
+    title: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
     description: site.description,
     url: site.url,
     siteName: "David Aldana | Gestor de Negocios",
@@ -63,7 +58,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary",
-    title: "Gestor de Negocios en Tuluá: Compra y Venta | David Aldana",
+    title: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
     description: site.description,
   },
 };
@@ -75,15 +70,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="es-CO"
+      className={`${geistSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <ScrollReveal />
         <Header />
 
         <main className="flex-1">{children}</main>
-          {}
         <Footer />
       </body>
     </html>

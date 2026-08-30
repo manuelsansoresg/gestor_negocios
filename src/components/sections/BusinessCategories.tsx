@@ -9,7 +9,7 @@ const categories = [
     number: "02",
     title: "Empresas y negocios",
     description:
-      "Empresas y negocios en funcionamiento, oportunidades de compra y negocios en venta.",
+      "Empresas y negocios en funcionamiento para quienes quieren vender, comprar o encontrar una oportunidad de inversión.",
   },
   {
     number: "03",
@@ -87,8 +87,8 @@ export default function BusinessCategories() {
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
             Puedo ayudarte a gestionar oportunidades de compra, venta o
-            inversión en Tuluá y el Valle del Cauca, en diferentes tipos de
-            activos, empresas y negocios.
+            inversión desde Tuluá y el Valle del Cauca, conectando diferentes
+            tipos de activos, empresas y negocios con interesados en Colombia.
           </p>
         </div>
 
