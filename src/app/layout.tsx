@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -80,6 +81,18 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18375723655"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18375723655');
+        `}
+      </Script>
     </html>
   );
 }
