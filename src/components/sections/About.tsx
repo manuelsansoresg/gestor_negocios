@@ -9,19 +9,19 @@ const actions = [
     number: "02",
     title: "Identifico el perfil adecuado",
     description:
-      "Defino qué tipo de comprador, vendedor, inversionista o empresa puede tener interés.",
+      "Realizo el contacto con el comprador, vendedor, inversionista o empresa que tenga interés, facilitando la gestión del negocio.",
   },
   {
     number: "03",
     title: "Busco posibles interesados",
     description:
-      "Amplío el alcance de la oportunidad buscando prospectos que puedan encajar con la operación.",
+      "Gestiono la oportunidad para lograr el mejor prospecto para el negocio.",
   },
   {
     number: "04",
     title: "Genero la conexión",
     description:
-      "Facilito el acercamiento para que las partes puedan conocer, evaluar y avanzar en la oportunidad.",
+      "Realizo el acercamiento entre las partes para que conozca, evaluen y avancen en el negocio.",
   },
 ];
 

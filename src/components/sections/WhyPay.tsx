@@ -39,9 +39,9 @@ export default function WhyPay() {
               </p>
 
               <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.06] tracking-[-0.04em] sm:text-5xl">
-                Tú tienes la oportunidad.
+                Tu buscas la oportunidad.
                 <span className="mt-2 block text-[#68a0ff]">
-                  Yo busco a quién puede interesarle.
+                  Yo te ayudo a volverla realidad.
                 </span>
               </h2>
             </div>
