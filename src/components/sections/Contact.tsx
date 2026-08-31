@@ -100,6 +100,44 @@ export default function Contact() {
                 </a>
               </div>
 
+              {/* Horario de atención */}
+              <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1668ff]/10 text-[#68a0ff]">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      className="h-5 w-5"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="9" />
+                      <path d="M12 7v5l3 2" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#68a0ff]">
+                      Horario de atención
+                    </p>
+
+                    <p className="mt-2 text-sm font-medium text-white">
+                      Lunes a viernes
+                    </p>
+
+                    <p className="mt-1 text-sm text-white/55">
+                      9:00 a. m. – 5:00 p. m.
+                    </p>
+
+                    <p className="mt-2 text-xs text-white/35">
+                      Hora de Colombia
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-7 border-t border-white/10 pt-6">
                 <p className="text-xs leading-6 text-white/55">
                   La información inicial me permite conocer la oportunidad y
