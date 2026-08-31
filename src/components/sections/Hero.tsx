@@ -23,7 +23,7 @@ export default function Hero() {
             <span className="h-px w-9 bg-[#2878ff]" />
 
             <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
-              David Aldana · Tuluá, Valle del Cauca
+              David Aldana · Gestor de Negocios
             </span>
           </div>
 
@@ -63,7 +63,7 @@ export default function Hero() {
             </p>
 
             <p className="mt-1 text-sm text-white/55">
-              Gestión comercial desde Tuluá y Valle del Cauca para Colombia
+              Gestión de oportunidades comerciales en Colombia
             </p>
           </div>
         </div>

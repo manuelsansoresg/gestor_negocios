@@ -20,8 +20,7 @@ export default function Footer() {
             </p>
 
             <p className="mt-2 text-sm text-white/55">
-              Gestor de Negocios en Tuluá, Valle del Cauca, con alcance en
-              Colombia
+              Gestor de Negocios en Colombia
             </p>
           </div>
 
@@ -35,7 +34,7 @@ export default function Footer() {
             </p>
 
             <p className="mt-1 text-sm text-white/50">
-              Tuluá · Valle del Cauca
+              Colombia
             </p>
           </div>
         </div>

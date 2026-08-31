@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
 
   title: {
-    default: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
+    default: "Gestor de Negocios en Colombia | David Aldana",
     template: "%s | David Aldana",
   },
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
+    title: "Gestor de Negocios en Colombia | David Aldana",
     description: site.description,
     url: site.url,
     siteName: "David Aldana | Gestor de Negocios",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary",
-    title: "Gestor de Negocios en Tuluá y Colombia | David Aldana",
+    title: "Gestor de Negocios en Colombia | David Aldana",
     description: site.description,
   },
 };

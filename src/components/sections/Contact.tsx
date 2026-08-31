@@ -33,7 +33,7 @@ export default function Contact() {
               <span className="h-px w-9 bg-[#2878ff]" />
 
               <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
-                Contacto · Tuluá
+                Contacto · Colombia
               </span>
             </div>
 
@@ -42,9 +42,9 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-              Desde Tuluá, Valle del Cauca, gestiono oportunidades con alcance
-              en Colombia. Cuéntame qué estás buscando o qué quieres vender y
-              revisamos cómo conectar con posibles interesados.
+              Gestiono oportunidades comerciales en Colombia. Cuéntame qué
+              estás buscando o qué quieres vender y revisamos cómo conectar con
+              posibles interesados.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -74,7 +74,7 @@ export default function Contact() {
               </h3>
 
               <p className="mt-2 text-sm font-medium text-[#68a0ff]">
-                Tuluá · Valle del Cauca · Colombia
+                Colombia
               </p>
 
               <p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">

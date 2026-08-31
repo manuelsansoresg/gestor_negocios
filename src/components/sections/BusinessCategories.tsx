@@ -87,8 +87,8 @@ export default function BusinessCategories() {
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
             Puedo ayudarte a gestionar oportunidades de compra, venta o
-            inversión desde Tuluá y el Valle del Cauca, conectando diferentes
-            tipos de activos, empresas y negocios con interesados en Colombia.
+            inversión, conectando diferentes tipos de activos, empresas y
+            negocios con interesados en Colombia.
           </p>
         </div>
 

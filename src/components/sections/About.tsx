@@ -57,14 +57,13 @@ export default function About() {
             </h2>
 
             <p className="mt-6 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              Si quieres vender un inmueble, negocio, empresa, vehículo,
+              Vendes un inmueble, negocio, empresa, vehículo,
               maquinaria, franquicia u otro activo, puedo ayudarte a buscar
-              posibles compradores en Tuluá, el Valle del Cauca y otras zonas
-              de Colombia.
+              posibles compradores en Colombia.
             </p>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              Y si estás buscando comprar o invertir, puedo ayudarte a
+              ¿Buscas comprar o invertir? puedo ayudarte a
               identificar empresas, negocios en funcionamiento y oportunidades
               que correspondan con lo que necesitas.
             </p>
