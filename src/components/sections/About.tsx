@@ -3,7 +3,7 @@ const actions = [
     number: "01",
     title: "Analizo tu oportunidad",
     description:
-      "Conozco qué quieres comprar, vender o gestionar y reviso la información comercial disponible.",
+      "Te oriento para que realices el mejor negocio al comprar vender o gestionar y te ofrezco información comercial disponible para que hagas el mejor negocio",
   },
   {
     number: "02",
