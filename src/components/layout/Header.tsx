@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
@@ -22,16 +23,23 @@ export default function Header() {
           aria-label="Ir al inicio"
           className="group flex items-center gap-3"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#1668ff] text-sm font-bold text-white">
-            DA
+          <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-white">
+            <Image
+              src="/images/gestor de negocio colombia.png"
+              alt=""
+              width={56}
+              height={56}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
 
-          <div className="leading-tight">
-            <p className="text-base font-semibold tracking-[-0.02em] text-white">
-              David Aldana
+          <div className="leading-none">
+            <p className="text-base font-bold tracking-[0.08em] text-[#3b82f6]">
+              GESTOR
             </p>
-            <p className="mt-0.5 text-[11px] uppercase tracking-[0.18em] text-white/55">
-              Gestor de Negocios
+            <p className="mt-1 text-[10px] font-medium tracking-[0.2em] text-[#f2b719]">
+              DE NEGOCIOS
             </p>
           </div>
         </a>
