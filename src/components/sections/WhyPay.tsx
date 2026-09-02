@@ -3,19 +3,19 @@ const benefits = [
     number: "01",
     title: "Ahorras tiempo",
     description:
-      "No tienes que dedicar todo tu tiempo a buscar personas interesadas mientras atiendes tus propias actividades.",
+      "Yo me encargo de promover tus negocios, mientras tú atiendes tus propias actividades.",
   },
   {
     number: "02",
     title: "Amplías tu alcance",
     description:
-      "La oportunidad deja de depender únicamente de tus contactos o de las personas que ya conoces.",
+      "Doy a conocer tu negocio a personas que estén interesadas de manera global, que realmente busquen oportunidades de inversión.",
   },
   {
     number: "03",
-    title: "Tienes seguimiento",
+    title: "Te asesoramos",
     description:
-      "Hay una persona dedicada a mover la oportunidad, dar continuidad a conversaciones y facilitar el proceso.",
+      "Hay una persona dedicada a impulsar la oportunidad, dar continuidad al proceso y facilitar el progreso hasta hacerlo realidad.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function WhyPay() {
               </p>
 
               <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.06] tracking-[-0.04em] sm:text-5xl">
-                Tu buscas la oportunidad.
+                Tú buscas la oportunidad.
                 <span className="mt-2 block text-[#68a0ff]">
                   Yo te ayudo a volverla realidad.
                 </span>
@@ -48,8 +48,8 @@ export default function WhyPay() {
 
             <p className="max-w-xl text-base leading-8 text-white/60 sm:text-lg">
               Ahorras tiempo, amplías tu alcance comercial y tienes una persona
-              dedicada a buscar, conectar y dar seguimiento a posibles
-              interesados en tu operación.
+              dedicada a impulsar la oportunidad, dar continuidad al proceso y
+              facilitar el progreso hasta hacerlo realidad.
             </p>
           </div>
         </div>

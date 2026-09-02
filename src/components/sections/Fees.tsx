@@ -37,15 +37,6 @@ const managementIncludes = [
   },
 ];
 
-const factors = [
-  "Tipo de operación",
-  "Valor",
-  "Complejidad",
-  "Tiempo",
-  "Alcance",
-  "Condiciones particulares",
-];
-
 export default function Fees() {
   return (
     <section
@@ -58,77 +49,29 @@ export default function Fees() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
-          <div data-reveal>
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-9 bg-[#2878ff]" />
+        <div data-reveal className="max-w-3xl">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="h-px w-9 bg-[#2878ff]" />
 
-              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
-                Honorarios
-              </span>
-            </div>
-
-            <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl">
-              Honorarios personalizados
-            </h2>
-
-            <p className="mt-6 max-w-xl text-base leading-8 text-white/60 sm:text-lg">
-              Cada operación tiene un porcentaje definido previamente según su
-              valor, complejidad, tiempo y alcance de la gestión.
-            </p>
-
-            <p className="mt-5 max-w-xl text-base leading-8 text-white/50">
-              Antes de iniciar, acordamos las condiciones para que tengas
-              claridad sobre el servicio y los honorarios.
-            </p>
+            <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#68a0ff]">
+              Honorarios
+            </span>
           </div>
 
-          <div
-            data-reveal="right"
-            data-delay="1"
-            className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 sm:p-9"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-              Ejemplo ilustrativo
-            </p>
+          <h2 className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl">
+            Honorarios personalizados
+          </h2>
 
-            <p className="mt-5 text-sm text-white/55">
-              Operación concretada por
-            </p>
+          <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
+            Cada operación tiene un porcentaje definido previamente según su
+            valor, complejidad, tiempo y alcance de la gestión. 8% sobre el
+            valor de la transacción.
+          </p>
 
-            <p className="mt-2 text-3xl font-semibold text-white">
-              $100.000.000 COP
-            </p>
-
-            <div className="mt-6 border-t border-white/10 pt-6">
-              <div className="flex items-end justify-between gap-6">
-                <div>
-                  <p className="text-sm text-white/55">
-                    Porcentaje acordado
-                  </p>
-
-                  <p className="mt-2 text-2xl font-semibold text-[#68a0ff]">
-                    8%
-                  </p>
-                </div>
-
-                <div className="text-right">
-                  <p className="text-sm text-white/55">
-                    Honorario de gestión
-                  </p>
-
-                  <p className="mt-2 text-2xl font-semibold">
-                    $8.000.000
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <p className="mt-6 text-xs leading-6 text-white/55">
-              El 8% es únicamente un ejemplo. No representa una tarifa fija
-              para todas las operaciones.
-            </p>
-          </div>
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/50">
+            Antes de iniciar, acordamos las condiciones para que tengas
+            claridad sobre el servicio y los honorarios.
+          </p>
         </div>
 
         <div className="mt-20">
@@ -138,7 +81,7 @@ export default function Fees() {
             </p>
 
             <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
-              El honorario corresponde a una gestión, no solamente a un contacto
+              El honorario corresponde a una gestión.
             </h3>
           </div>
 
@@ -164,42 +107,6 @@ export default function Fees() {
               </article>
             ))}
           </div>
-        </div>
-
-        <div
-          data-reveal
-          className="mt-16 grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 sm:p-9 lg:grid-cols-[0.75fr_1.25fr]"
-        >
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-              Cada caso es diferente
-            </p>
-
-            <h3 className="mt-4 text-2xl font-semibold">
-              El porcentaje puede variar
-            </h3>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {factors.map((factor) => (
-              <div
-                key={factor}
-                className="rounded-xl border border-white/10 px-4 py-3 text-sm text-white/60"
-              >
-                {factor}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/[0.02] p-6">
-          <p className="text-sm leading-7 text-white/55">
-            La revisión de información corresponde a la información comercial
-            disponible. Las verificaciones jurídicas, financieras, contables,
-            técnicas, notariales, peritajes u otros estudios especializados
-            corresponden a las partes y a los profesionales o entidades
-            competentes.
-          </p>
         </div>
       </div>
     </section>

@@ -7,31 +7,31 @@ const steps = [
   },
   {
     number: "02",
-    title: "Identifico posibles interesados",
+    title: "Contacto posibles interesados",
     description:
       "Defino qué perfil de comprador, vendedor, inversionista o empresa puede tener mayor afinidad con la oportunidad.",
   },
   {
     number: "03",
-    title: "Busco y filtro prospectos",
+    title: "Busco y filtro información",
     description:
       "Busco posibles interesados y priorizo aquellos que pueden tener una relación real con la operación.",
   },
   {
     number: "04",
-    title: "Genero la conexión",
+    title: "Genero conexión",
     description:
-      "Facilito el contacto y el acercamiento para que las partes puedan conocer y evaluar la oportunidad.",
+      "Promuevo el contacto y el acercamiento para que las partes puedan conocer y evaluar la oportunidad.",
   },
   {
     number: "05",
-    title: "Coordino el acercamiento",
+    title: "Coordino el proceso",
     description:
       "Apoyo la comunicación y la coordinación necesaria mientras las partes avanzan en el proceso comercial.",
   },
   {
     number: "06",
-    title: "Doy seguimiento",
+    title: "Doy acompañamiento",
     description:
       "Mantengo continuidad y acompaño la gestión comercial hasta el punto previamente acordado con el cliente.",
   },
@@ -95,41 +95,6 @@ export default function HowItWorks() {
               </p>
             </article>
           ))}
-        </div>
-
-        <div
-          data-reveal
-          className="mt-14 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9"
-        >
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-                Seguimiento comercial
-              </p>
-
-              <p className="mt-3 max-w-3xl text-xl font-medium leading-8">
-                La gestión no termina cuando aparece un contacto. El seguimiento
-                y la coordinación continúan dentro del alcance acordado para
-                mantener activa la oportunidad.
-              </p>
-            </div>
-
-            <a
-              href="#contacto"
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#1668ff] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
-            >
-              Consultar una oportunidad
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-[1.5rem] border border-[#dbe3f0] bg-white p-6">
-          <p className="text-sm leading-7 text-[#667085]">
-            La revisión de información corresponde a la información comercial
-            disponible. Las verificaciones jurídicas, financieras, contables,
-            técnicas, notariales o especializadas corresponden a las partes y a
-            los profesionales o entidades competentes.
-          </p>
         </div>
       </div>
     </section>

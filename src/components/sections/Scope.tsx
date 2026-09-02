@@ -2,17 +2,17 @@ const scopeItems = [
   {
     title: "Sí hago gestión comercial",
     description:
-      "Busco prospectos, facilito el contacto entre las partes, reviso la información comercial disponible, coordino acercamientos, doy seguimiento y acompaño el proceso dentro del alcance acordado.",
+      "Sí tengo experiencia y conocimientos, lo que me facilita el contacto entre las partes, así como la revisión de la información comercial disponible. Mi experiencia es precisamente en negocios en línea y tengo estudios como gestor de negocios.",
   },
   {
     title: "No realizo trámites especializados",
     description:
-      "No sustituyo a abogados, contadores, peritos, notarios, entidades financieras, autoridades de tránsito ni otros profesionales o entidades competentes.",
+      "No sustituyo abogados, contadores, peritos, notarios, entidades financieras, autoridades de tránsito ni otros profesionales o entidades competentes. Mi participación solo es comercial.",
   },
   {
     title: "La verificación especializada corresponde a las partes",
     description:
-      "Las verificaciones jurídicas, financieras, contables, técnicas, notariales, peritajes y demás estudios especializados deben ser realizados directamente por las partes con los profesionales correspondientes.",
+      "Las verificaciones legales, jurídicas, financieras, contables, técnicas, notariales, peritajes y demás estudios especializados deben ser realizados directamente por las partes con los profesionales correspondientes.",
   },
 ];
 
@@ -47,10 +47,10 @@ export default function Scope() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-[#5b6472] sm:text-lg">
-            Mi trabajo se enfoca en la gestión y conexión comercial. Acompaño el
-            proceso dentro del alcance acordado, sin reemplazar a los
-            profesionales o entidades que deben intervenir en verificaciones o
-            trámites especializados.
+            Mi trabajo se enfoca en la gestión y conexión comercial. Acompaño
+            el proceso dentro del alcance acordado, sin reemplazar a los
+            profesionales o entidades que deban intervenir en verificaciones
+            o trámites legales, judiciales o especializados.
           </p>
         </div>
 
@@ -75,22 +75,6 @@ export default function Scope() {
               </p>
             </article>
           ))}
-        </div>
-
-        <div
-          data-reveal
-          className="mt-12 rounded-[2rem] bg-[#07111f] p-7 text-white sm:p-9"
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
-            Importante
-          </p>
-
-          <p className="mt-3 max-w-3xl text-xl font-medium leading-8">
-            La revisión de información dentro de la gestión se refiere a la
-            información comercial suministrada y disponible para conocer la
-            oportunidad. No constituye una certificación jurídica, financiera,
-            contable, técnica o notarial.
-          </p>
         </div>
       </div>
     </section>

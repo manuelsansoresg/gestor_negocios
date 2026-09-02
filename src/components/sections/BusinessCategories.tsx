@@ -9,7 +9,7 @@ const categories = [
     number: "02",
     title: "Empresas y negocios",
     description:
-      "Empresas y negocios en funcionamiento para quienes quieren vender, comprar o encontrar una oportunidad de inversión.",
+      "Empresas y negocios en funcionamiento para quienes quieren vender, comprar o encontrar una oportunidad de inversión o hacer marketing digital.",
   },
   {
     number: "03",
@@ -82,7 +82,7 @@ export default function BusinessCategories() {
           </div>
 
           <h2 className="text-4xl font-semibold leading-[1.06] tracking-[-0.04em] sm:text-5xl md:text-6xl">
-            Una oportunidad puede estar en cualquier sector
+            Una oportunidad de negocio puede estar en cualquier lugar
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
@@ -130,9 +130,9 @@ export default function BusinessCategories() {
               </p>
 
               <p className="mt-3 max-w-2xl text-xl font-medium leading-8 text-white">
-                Estas son solo algunas de las oportunidades que puedo gestionar.
-                Si tienes algo diferente para comprar o vender, cuéntame y
-                revisamos el caso.
+                Estas son solo algunas de las oportunidades de negocio que
+                puedo gestionar. Si tienes algo diferente para comprar o
+                vender, cuéntame y revisamos el caso.
               </p>
             </div>
 

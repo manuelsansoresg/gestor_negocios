@@ -2,17 +2,17 @@ const differences = [
   {
     title: "Identifico",
     description:
-      "Defino quién puede tener interés real según el tipo de oportunidad.",
+      "Quién puede tener interés real según el tipo de oportunidad.",
   },
   {
     title: "Busco",
     description:
-      "La gestión incluye la búsqueda activa de posibles prospectos.",
+      "Posibles prospectos dentro de la gestión.",
   },
   {
     title: "Conecto",
     description:
-      "Facilito un acercamiento con contexto para que ambas partes puedan evaluar.",
+      "El acercamiento con contexto para que ambas partes puedan evaluar.",
   },
   {
     title: "Doy seguimiento",
@@ -43,7 +43,7 @@ export default function Differentiation() {
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-            Mi trabajo no se limita a presentar dos personas. Identifico
+            Mi trabajo no se limita a presentar personas, sino que identifico
             prospectos, facilito conexiones, coordino el proceso comercial y
             doy seguimiento hasta el alcance previamente acordado.
           </p>
