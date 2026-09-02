@@ -1,3 +1,5 @@
+import LeadForm from "@/components/forms/LeadForm";
+
 const opportunities = [
   "Inmuebles",
   "Empresas",
@@ -82,22 +84,23 @@ export default function Contact() {
                 qué tipo de oportunidad estás buscando.
               </p>
 
-              <div className="mt-8 space-y-3">
+              <LeadForm />
+
+              <div className="my-5 flex items-center gap-4 text-sm text-white/50">
+                <span className="h-px flex-1 bg-white/10" />
+                <span>o</span>
+                <span className="h-px flex-1 bg-white/10" />
+              </div>
+              <div className="space-y-3">
                 <a
                   href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
                 >
-                  Hablar con David por WhatsApp
+                  Prefiero hablar por WhatsApp
                 </a>
 
-                <a
-                  href="mailto:davidaldana97@hotmail.com"
-                  className="flex min-h-14 w-full items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-medium text-white transition hover:border-[#2878ff]/50 hover:bg-[#2878ff]/10"
-                >
-                  Enviar correo
-                </a>
               </div>
 
               {/* Horario de atención */}

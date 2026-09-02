@@ -1,14 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Qué hago", href: "#que-es-la-gestion" },
-  { label: "Oportunidades", href: "#portafolio" },
-  { label: "Cómo trabajo", href: "#como-trabajo" },
-  { label: "Honorarios", href: "#honorarios" },
+  { label: "Inicio", href: "/#inicio" },
+  { label: "Qué hago", href: "/#que-es-la-gestion" },
+  { label: "Oportunidades", href: "/#portafolio" },
+  { label: "Cómo trabajo", href: "/#como-trabajo" },
+  { label: "Honorarios", href: "/#honorarios" },
 ];
 
 export default function Header() {
@@ -18,8 +19,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#05070b]/95 text-white backdrop-blur-xl">
       <div className="mx-auto flex h-[78px] max-w-7xl items-center justify-between px-6 md:px-10 lg:px-12">
         {/* Marca */}
-        <a
-          href="#inicio"
+        <Link
+          href="/#inicio"
           aria-label="Ir al inicio"
           className="group flex items-center gap-3"
         >
@@ -42,7 +43,7 @@ export default function Header() {
               DE NEGOCIOS
             </p>
           </div>
-        </a>
+        </Link>
 
         {/* Menú desktop */}
         <nav
@@ -50,24 +51,24 @@ export default function Header() {
           className="hidden items-center gap-7 lg:flex"
         >
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="text-sm font-medium text-white/60 transition hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* CTA desktop */}
         <div className="hidden lg:block">
-          <a
-            href="#contacto"
+          <Link
+            href="/#contacto"
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-[#1668ff] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#347cff]"
           >
             Consultar una oportunidad
-          </a>
+          </Link>
         </div>
 
         {/* Botón móvil */}
@@ -115,23 +116,23 @@ export default function Header() {
           className="mx-auto flex max-w-7xl flex-col px-6 py-5"
         >
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               onClick={() => setIsOpen(false)}
               className="border-b border-white/[0.06] py-4 text-base font-medium text-white/70 transition hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
 
-          <a
-            href="#contacto"
+          <Link
+            href="/#contacto"
             onClick={() => setIsOpen(false)}
             className="mt-5 flex min-h-12 items-center justify-center rounded-full bg-[#1668ff] px-6 text-sm font-semibold text-white"
           >
             Consultar una oportunidad
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
