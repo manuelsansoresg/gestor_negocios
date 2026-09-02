@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden bg-[#05070b] py-20 text-white md:py-24"
+      className="relative overflow-hidden bg-[#05070b] py-14 text-white md:py-16"
     >
       <div
         aria-hidden="true"
@@ -29,8 +29,8 @@ export default function Contact() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:gap-20">
-          <div data-reveal="left">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-10 xl:gap-14">
+          <div data-reveal="left" className="min-w-0">
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px w-9 bg-[#2878ff]" />
 
@@ -49,7 +49,7 @@ export default function Contact() {
               posibles interesados.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2">
               {opportunities.map((opportunity) => (
                 <span
                   key={opportunity}
@@ -60,53 +60,44 @@ export default function Contact() {
               ))}
             </div>
 
-            <p className="mt-10 max-w-2xl text-xl font-medium leading-8 text-white">
+            <p className="mt-7 max-w-2xl text-xl font-medium leading-8 text-white">
               Si tienes una oportunidad, hablemos.
             </p>
+            <a
+              href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[#1668ff]/50 bg-[#1668ff]/10 px-6 py-2.5 text-sm font-semibold text-white transition hover:border-[#347cff] hover:bg-[#1668ff]/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#68a0ff] sm:w-auto"
+            >
+              WhatsApp
+            </a>
           </div>
 
-          <div data-reveal="right" data-delay="1" className="relative">
-            <div className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-7 shadow-[0_30px_80px_rgba(0,0,0,0.4)] sm:p-9">
+          <div data-reveal="right" data-delay="1" className="relative min-w-0">
+            <div className="rounded-[2rem] border border-white/10 bg-[#0a0f18] p-6 shadow-[0_30px_80px_rgba(0,0,0,0.4)] sm:p-7">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#68a0ff]">
                 David Aldana
               </p>
 
-              <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white">
+              <h3 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-3xl">
                 Gestor de Negocios
               </h3>
 
-              <p className="mt-2 text-sm font-medium text-[#68a0ff]">
+              <p className="mt-1 text-sm font-medium text-[#68a0ff]">
                 Colombia
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-white/55 sm:text-base">
+              <p className="mt-3 text-sm leading-6 text-white/55">
                 Escríbeme y cuéntame brevemente qué quieres comprar, vender o
                 qué tipo de oportunidad estás buscando.
               </p>
 
               <LeadForm />
 
-              <div className="my-5 flex items-center gap-4 text-sm text-white/50">
-                <span className="h-px flex-1 bg-white/10" />
-                <span>o</span>
-                <span className="h-px flex-1 bg-white/10" />
-              </div>
-              <div className="space-y-3">
-                <a
-                  href="https://wa.me/573053971539?text=Hola%20David,%20quisiera%20consultarte%20sobre%20una%20oportunidad%20de%20negocio."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex min-h-14 w-full items-center justify-center rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff]"
-                >
-                  Prefiero hablar por WhatsApp
-                </a>
-
-              </div>
-
               {/* Horario de atención */}
-              <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1668ff]/10 text-[#68a0ff]">
+              <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#1668ff]/10 text-[#68a0ff]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -121,28 +112,24 @@ export default function Contact() {
                     </svg>
                   </div>
 
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#68a0ff]">
+                  <div className="min-w-0">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#68a0ff]">
                       Horario de atención
                     </p>
 
-                    <p className="mt-2 text-sm font-medium text-white">
-                      Lunes a viernes
-                    </p>
-
-                    <p className="mt-1 text-sm text-white/55">
-                      9:00 a. m. – 5:00 p. m.
-                    </p>
-
-                    <p className="mt-2 text-xs text-white/35">
-                      Hora de Colombia
-                    </p>
+                    <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs leading-5 text-white/55">
+                      <span className="font-medium text-white/85">Lunes a viernes</span>
+                      <span aria-hidden="true">·</span>
+                      <span>9:00 a. m. – 5:00 p. m.</span>
+                      <span aria-hidden="true" className="hidden sm:inline">·</span>
+                      <span className="basis-full text-white/45 sm:basis-auto">Hora de Colombia</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-7 border-t border-white/10 pt-6">
-                <p className="text-xs leading-6 text-white/55">
+              <div className="mt-4 border-t border-white/10 pt-3">
+                <p className="text-xs leading-5 text-white/55">
                   La información inicial me permite conocer la oportunidad y
                   determinar cómo puedo ayudarte.
                 </p>

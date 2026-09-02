@@ -9,7 +9,7 @@ const fields = [
   { name: "email", label: "Correo", type: "email", autoComplete: "email", min: 1, max: 160 },
   { name: "message", label: "Mensaje", type: "text", autoComplete: "off", min: 10, max: 2000 },
 ] as const;
-const inputClass = "mt-2 w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white outline-none focus:border-[#68a0ff] focus:ring-2 focus:ring-[#68a0ff]/40 disabled:opacity-60";
+const inputClass = "mt-1.5 block w-full min-w-0 rounded-xl border border-white/20 bg-white/5 px-3 py-2.5 text-base leading-5 text-white outline-none focus:border-[#68a0ff] focus:ring-2 focus:ring-[#68a0ff]/40 disabled:opacity-60";
 
 export default function LeadForm() {
   const locked = useRef(false);
@@ -44,14 +44,14 @@ export default function LeadForm() {
   }
 
   return (
-    <form onSubmit={submit} noValidate aria-busy={pending} className="mt-7 space-y-4">
+    <form onSubmit={submit} noValidate aria-busy={pending} className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
       {fields.map((field) => (
-        <div key={field.name}>
-          <label htmlFor={`lead-${field.name}`} className="text-sm font-medium text-white/85">{field.label}</label>
+        <div key={field.name} className={`min-w-0 ${field.name === "email" || field.name === "message" ? "sm:col-span-2" : ""}`}>
+          <label htmlFor={`lead-${field.name}`} className="block text-sm font-medium leading-5 text-white/85">{field.label}</label>
           {field.name === "message" ? (
-            <textarea id={`lead-${field.name}`} name={field.name} required minLength={field.min} maxLength={field.max} rows={4} disabled={pending} aria-invalid={!!errors[field.name]} aria-describedby={errors[field.name] ? `lead-${field.name}-error` : undefined} className={inputClass} />
+            <textarea id={`lead-${field.name}`} name={field.name} required minLength={field.min} maxLength={field.max} rows={3} disabled={pending} aria-invalid={!!errors[field.name]} aria-describedby={errors[field.name] ? `lead-${field.name}-error` : undefined} className={`${inputClass} min-h-24 resize-y`} />
           ) : (
-            <input id={`lead-${field.name}`} name={field.name} type={field.type} autoComplete={field.autoComplete} required minLength={field.min} maxLength={field.max} disabled={pending} aria-invalid={!!errors[field.name]} aria-describedby={errors[field.name] ? `lead-${field.name}-error` : undefined} className={inputClass} />
+            <input id={`lead-${field.name}`} name={field.name} type={field.type} autoComplete={field.autoComplete} required minLength={field.min} maxLength={field.max} disabled={pending} aria-invalid={!!errors[field.name]} aria-describedby={errors[field.name] ? `lead-${field.name}-error` : undefined} className={`${inputClass} h-11`} />
           )}
           {errors[field.name] && <p id={`lead-${field.name}-error`} className="mt-1 text-sm text-red-300">{errors[field.name]}</p>}
         </div>
@@ -60,10 +60,10 @@ export default function LeadForm() {
         <label htmlFor="lead-website">Website</label>
         <input id="lead-website" name="website" type="text" tabIndex={-1} autoComplete="off" maxLength={2000} />
       </div>
-      <button disabled={pending} className="min-h-14 w-full rounded-full bg-[#1668ff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#347cff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#68a0ff] disabled:cursor-wait disabled:opacity-60">
+      <button disabled={pending} className="min-h-11 w-full rounded-full bg-[#1668ff] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#347cff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#68a0ff] disabled:cursor-wait disabled:opacity-60 sm:col-span-2">
         {pending ? "Enviando…" : "Enviar información"}
       </button>
-      {feedback && <p role={feedback.ok ? "status" : "alert"} className={`rounded-xl p-3 text-sm ${feedback.ok ? "bg-emerald-400/10 text-emerald-200" : "bg-red-400/10 text-red-200"}`}>{feedback.message}</p>}
+      {feedback && <p role={feedback.ok ? "status" : "alert"} className={`rounded-xl p-3 text-sm sm:col-span-2 ${feedback.ok ? "bg-emerald-400/10 text-emerald-200" : "bg-red-400/10 text-red-200"}`}>{feedback.message}</p>}
     </form>
   );
 }
