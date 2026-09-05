@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#030508] text-white">
@@ -39,10 +41,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6">
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} David Aldana — Gestor de Negocios
           </p>
+
+          <Link
+            href="/terminos-y-condiciones"
+            className="text-xs font-medium text-white/50 transition hover:text-[#68a0ff]"
+          >
+            Términos y Condiciones
+          </Link>
         </div>
       </div>
     </footer>

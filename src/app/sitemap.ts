@@ -8,5 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${site.url}/terminos-y-condiciones`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }
