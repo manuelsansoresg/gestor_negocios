@@ -41,17 +41,29 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} David Aldana — Gestor de Negocios
           </p>
 
-          <Link
-            href="/terminos-y-condiciones"
-            className="text-xs font-medium text-white/50 transition hover:text-[#68a0ff]"
+          <nav
+            aria-label="Enlaces legales"
+            className="flex flex-wrap gap-x-5 gap-y-2"
           >
-            Términos y Condiciones
-          </Link>
+            <Link
+              href="/terminos-y-condiciones"
+              className="text-xs font-medium text-white/50 transition hover:text-[#68a0ff]"
+            >
+              Términos y Condiciones
+            </Link>
+
+            <Link
+              href="/politica-de-privacidad"
+              className="text-xs font-medium text-white/50 transition hover:text-[#68a0ff]"
+            >
+              Política de Privacidad
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>
