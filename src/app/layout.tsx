@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Script from "next/script";
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import FloatingProspectChat from "@/components/ui/FloatingProspectChat";
+
 import { site } from "@/data/site";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -75,7 +79,10 @@ export default function RootLayout({
       className={`${geistSans.variable} h-full antialiased`}
     >
       <head>
-        <Script id="google-tag-manager" strategy="beforeInteractive">
+        <Script
+          id="google-tag-manager"
+          strategy="beforeInteractive"
+        >
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -85,32 +92,53 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+
       <body className="flex min-h-full flex-col">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W3TP7XW2"
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
             title="Google Tag Manager"
           />
         </noscript>
+
         <ScrollReveal />
+
         <Header />
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          {children}
+        </main>
+
         <Footer />
+
+        <FloatingProspectChat />
       </body>
+
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-18375723655"
         strategy="afterInteractive"
       />
+
       <Script id="google-tag">
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+
           gtag('js', new Date());
-          gtag('config', 'AW-18375723655');
+
+          gtag(
+            'config',
+            'AW-18375723655'
+          );
         `}
       </Script>
     </html>
