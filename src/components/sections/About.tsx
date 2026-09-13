@@ -21,7 +21,7 @@ const actions = [
     number: "04",
     title: "Genero la conexión",
     description:
-      "Realizo el acercamiento entre las partes para que conozca, evaluen y avancen en el negocio.",
+      "Realizo el acercamiento entre las partes para que conozcan, evalúen y avancen en el negocio.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function About() {
             </p>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-[#5b6472] sm:text-lg">
-              ¿Buscas comprar o invertir? puedo ayudarte a
+              ¿Buscas comprar o invertir? Puedo ayudarte a
               identificar empresas, negocios en funcionamiento y oportunidades
               que correspondan con lo que necesitas.
             </p>

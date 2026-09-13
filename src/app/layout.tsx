@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import FloatingProspectChat from "@/components/ui/FloatingProspectChat";
+import BackToTop from "@/components/ui/BackToTop";
 
 import { site } from "@/data/site";
 
@@ -118,6 +119,7 @@ export default function RootLayout({
         <Footer />
 
         <FloatingProspectChat />
+        <BackToTop />
       </body>
 
       <Script

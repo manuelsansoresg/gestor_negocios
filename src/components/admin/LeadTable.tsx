@@ -3,8 +3,9 @@
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { LeadStatus } from "@prisma/client";
+import { getLeadTag } from "@/lib/lead-options";
 
-export type LeadRow = { id: number; fullName: string; phone: string; email: string; message: string; status: LeadStatus; createdAt: string };
+export type LeadRow = { id: number; action: string | null; opportunityType: string | null; customOpportunityType: string | null; fullName: string; city: string | null; valueRange: string | null; phone: string; email: string; message: string; status: LeadStatus; createdAt: string };
 const labels: Record<LeadStatus, string> = {
   NUEVO: "Nuevo", CONTACTADO: "Contactado", INTERESADO: "Interesado", SEGUIMIENTO: "Seguimiento",
   CITA_AGENDADA: "Cita agendada", NO_INTERESADO: "No interesado", CERRADO: "Cerrado", SPAM: "Spam",
@@ -48,16 +49,21 @@ export default function LeadTable({ leads }: { leads: LeadRow[] }) {
   if (!leads.length) return <div className="rounded-2xl border border-slate-200 bg-white p-10 text-center text-slate-500">Todavía no hay prospectos. Aquí aparecerán los formularios recibidos.</div>;
   return (
     <div role="region" aria-label="Prospectos recibidos" tabIndex={0} className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <table className="w-full min-w-[960px] text-left text-sm text-slate-700">
+      <table className="w-full min-w-[1500px] text-left text-sm text-slate-700">
         <caption className="sr-only">Prospectos ordenados del más reciente al más antiguo. Fechas en hora de Colombia.</caption>
         <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
-          <tr>{["Fecha", "Nombre", "Contacto", "Mensaje", "Estado"].map((label) => <th key={label} scope="col" className="px-5 py-4">{label}</th>)}</tr>
+          <tr>{["Fecha", "Etiqueta", "Acción", "Oportunidad", "Ciudad", "Rango", "Nombre", "Contacto", "Descripción", "Estado"].map((label) => <th key={label} scope="col" className="px-5 py-4">{label}</th>)}</tr>
         </thead>
         <tbody className="divide-y divide-slate-100">
           {leads.map((lead) => {
             const digits = lead.phone.replace(/\D/g, "");
             return <tr key={lead.id} className="align-top">
               <td className="whitespace-nowrap px-5 py-5"><time dateTime={lead.createdAt}>{new Intl.DateTimeFormat("es-CO", { dateStyle: "medium", timeStyle: "short", timeZone: "America/Bogota" }).format(new Date(lead.createdAt))}</time></td>
+              <td className="px-5 py-5"><span className="rounded-full bg-slate-100 px-3 py-1.5 font-mono text-xs text-slate-700">{getLeadTag(lead.action, lead.opportunityType)}</span></td>
+              <td className="px-5 py-5 font-medium text-slate-900">{lead.action ?? "—"}</td>
+              <td className="min-w-48 px-5 py-5">{lead.opportunityType ?? "—"}{lead.customOpportunityType && <span className="mt-1 block text-xs text-slate-500">{lead.customOpportunityType}</span>}</td>
+              <td className="px-5 py-5">{lead.city ?? "—"}</td>
+              <td className="min-w-40 px-5 py-5">{lead.valueRange ?? "—"}</td>
               <th scope="row" className="min-w-44 px-5 py-5 font-semibold text-slate-900">{lead.fullName}</th>
               <td className="px-5 py-5">
                 <a href={`tel:${lead.phone.replace(/[^\d+]/g, "")}`} className="block text-[#1668ff] hover:underline">{lead.phone}</a>

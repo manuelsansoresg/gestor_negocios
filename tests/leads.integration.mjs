@@ -51,12 +51,12 @@ try {
   check((await send('/api/leads', { method: 'POST', raw: '{invalid' })).status, 400);
   check((await send('/api/leads', { method: 'POST', raw: 'x'.repeat(17000) })).status, 413);
   check((await send('/api/leads', { method: 'POST', data: { fullName: 'x' } })).status, 400);
-  const lead = { fullName: 'Prospecto de prueba', phone: '+57 305-397 1539', email: leadEmail.toUpperCase(), message: '<script>alert("test")</script> Solicito información.', website: '' };
+  const lead = { action: 'Vender', opportunityType: 'Empresas y negocios', customOpportunityType: '', fullName: 'Prospecto de prueba', city: 'Bogotá', valueRange: 'Entre $100 y $300 millones', phone: '+57 305-397 1539', email: leadEmail.toUpperCase(), message: '<script>alert("test")</script> Solicito información.', website: '' };
   check((await send('/api/leads', { method: 'POST', data: { ...lead, website: 'spam.example' } })).status, 201);
   check(await prisma.lead.count({ where: { email: leadEmail } }), 0);
   check((await send('/api/leads', { method: 'POST', data: lead })).status, 201);
   const saved = await prisma.lead.findFirstOrThrow({ where: { email: leadEmail } });
-  check(saved.status, 'NUEVO'); check(saved.email, leadEmail);
+  check(saved.status, 'NUEVO'); check(saved.email, leadEmail); check(saved.action, 'Vender'); check(saved.opportunityType, 'Empresas y negocios'); check(saved.city, 'Bogotá');
   const route = `/api/leads/${saved.id}/status`;
   check((await send(route, { method: 'PATCH', data: { status: 'CONTACTADO' } })).status, 401);
   check((await send(route, { method: 'PATCH', cookie, origin: 'https://evil.example', data: { status: 'CONTACTADO' } })).status, 403);
@@ -70,7 +70,7 @@ try {
     check((await prisma.lead.findUniqueOrThrow({ where: { id: saved.id } })).status, status);
   }
   const html = await (await send('/admin/leads', { cookie })).text();
-  assert.ok(html.includes('&lt;script&gt;')); assert.ok(html.includes('https://wa.me/573053971539'));
+  assert.ok(html.includes('&lt;script&gt;')); assert.ok(html.includes('https://wa.me/573053971539')); assert.ok(html.includes('vender_empresa'));
   for (const [role, expires] of [['VISITANTE', '8h'], ['ADMINISTRADOR', '-1s']]) {
     const token = await new SignJWT({ userId: user.id, email, role }).setProtectedHeader({ alg: 'HS256' }).setIssuedAt().setExpirationTime(expires).setIssuer('gestor-negocios').setAudience('gestor-admin').sign(new TextEncoder().encode(process.env.AUTH_SECRET));
     check((await send(route, { method: 'PATCH', cookie: `gestor_admin_session=${token}`, data: { status: 'SPAM' } })).status, 401);

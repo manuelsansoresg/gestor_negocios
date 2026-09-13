@@ -18,6 +18,17 @@ export default function StructuredData() {
         inLanguage: "es-CO",
       },
       {
+        "@type": "ProfessionalService",
+        "@id": `${site.url}/#professional-service`,
+        name: `${site.ownerName} | ${site.title}`,
+        url: `${site.url}/conoceme`,
+        description: site.description,
+        telephone: site.phone,
+        email: site.email,
+        areaServed: serviceArea,
+        founder: { "@id": `${site.url}/#david-aldana` },
+      },
+      {
         "@type": "WebPage",
         "@id": `${site.url}/#webpage`,
         url: site.url,

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState, type MouseEvent } from "react";
 
 const navItems = [
   {
@@ -10,12 +11,12 @@ const navItems = [
     href: "/#inicio",
   },
   {
-    label: "Qué hago",
-    href: "/#que-es-la-gestion",
+    label: "Quién soy",
+    href: "/conoceme",
   },
   {
-    label: "Oportunidades",
-    href: "/#portafolio",
+    label: "Servicios",
+    href: "/servicios",
   },
   {
     label: "Cómo trabajo",
@@ -28,8 +29,19 @@ const navItems = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] =
     useState(false);
+
+  function goToContact(event: MouseEvent<HTMLAnchorElement>) {
+    setIsOpen(false);
+    if (pathname !== "/") return;
+    const contact = document.getElementById("contacto");
+    if (!contact) return;
+    event.preventDefault();
+    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.pushState(null, "", "#contacto");
+  }
 
   return (
     <header
@@ -138,6 +150,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <Link
             href="/#contacto"
+            onClick={goToContact}
             className="
               inline-flex
               min-h-11
@@ -289,9 +302,7 @@ export default function Header() {
 
           <Link
             href="/#contacto"
-            onClick={() =>
-              setIsOpen(false)
-            }
+            onClick={goToContact}
             className="
               mt-5
               flex min-h-12

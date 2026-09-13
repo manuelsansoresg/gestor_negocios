@@ -9,7 +9,7 @@ export default async function LeadsPage() {
   await requireAdmin();
   const leads = await prisma.lead.findMany({
     orderBy: [{ createdAt: "desc" }, { id: "desc" }],
-    select: { id: true, fullName: true, phone: true, email: true, message: true, status: true, createdAt: true },
+    select: { id: true, action: true, opportunityType: true, customOpportunityType: true, fullName: true, city: true, valueRange: true, phone: true, email: true, message: true, status: true, createdAt: true },
   });
   return <>
     <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Leads</h1>

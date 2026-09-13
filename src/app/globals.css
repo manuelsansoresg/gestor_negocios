@@ -63,6 +63,13 @@ html {
   scale: 1;
 }
 
+/* Los saltos por ancla deben mostrar el destino aunque omitan el recorrido del observer. */
+:target [data-reveal] {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
 /* Retrasos para grupos de tarjetas */
 
 [data-delay="1"] {

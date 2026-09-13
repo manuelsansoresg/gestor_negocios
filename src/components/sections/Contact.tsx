@@ -2,21 +2,19 @@ import LeadForm from "@/components/forms/LeadForm";
 
 const opportunities = [
   "Inmuebles",
-  "Empresas",
-  "Negocios",
+  "Empresas y negocios",
   "Franquicias",
-  "Maquinaria",
+  "Maquinaria y equipos",
   "Vehículos",
-  "Muebles",
-  "Inventarios",
-  "Proyectos",
+  "Inventarios / mercancía",
+  "Proyectos inmobiliarios",
 ];
 
 export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden bg-[#05070b] py-14 text-white md:py-16"
+      className="relative scroll-mt-[78px] overflow-hidden bg-[#05070b] py-14 text-white md:py-16"
     >
       <div
         aria-hidden="true"
@@ -45,7 +43,7 @@ export default function Contact() {
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
               Gestiono oportunidades comerciales en Colombia. Cuéntame qué
-              estás buscando o qué quieres vender y revisamos cómo conectar con
+              estás buscando o qué quieres vender y reviso cómo conectar con
               posibles interesados.
             </p>
 

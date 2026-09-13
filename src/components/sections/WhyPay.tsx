@@ -13,7 +13,7 @@ const benefits = [
   },
   {
     number: "03",
-    title: "Te asesoramos",
+    title: "Te asesoro",
     description:
       "Hay una persona dedicada a impulsar la oportunidad, dar continuidad al proceso y facilitar el progreso hasta hacerlo realidad.",
   },

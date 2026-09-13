@@ -132,7 +132,7 @@ export default function BusinessCategories() {
               <p className="mt-3 max-w-2xl text-xl font-medium leading-8 text-white">
                 Estas son solo algunas de las oportunidades de negocio que
                 puedo gestionar. Si tienes algo diferente para comprar o
-                vender, cuéntame y revisamos el caso.
+                vender, cuéntame y reviso el caso.
               </p>
             </div>
 

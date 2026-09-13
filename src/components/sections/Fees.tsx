@@ -63,13 +63,12 @@ export default function Fees() {
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
-            Cada operación tiene un porcentaje definido previamente según su
-            valor, complejidad, tiempo y alcance de la gestión. 8% sobre el
-            valor de la transacción.
+            Los honorarios se acuerdan por escrito antes de iniciar, según el
+            tipo de operación, su valor, complejidad y alcance.
           </p>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/50">
-            Antes de iniciar, acordamos las condiciones para que tengas
+            Antes de iniciar, acuerdo contigo las condiciones para que tengas
             claridad sobre el servicio y los honorarios.
           </p>
         </div>
