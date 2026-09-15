@@ -1,10 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-function selectAction(action: "Vender" | "Comprar") {
-  window.dispatchEvent(new CustomEvent("lead-action-select", { detail: action }));
-}
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,8 +19,7 @@ export default function Hero() {
         className="absolute bottom-[-12rem] right-[-8rem] h-[30rem] w-[30rem] rounded-full bg-[#0047ab]/10 blur-[120px]"
       />
 
-      <div className="mx-auto grid min-h-[calc(100vh-78px)] max-w-7xl items-center gap-12 px-6 py-14 md:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-12 lg:py-16">
-        {/* Contenido */}
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 md:px-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:px-12 lg:py-16">
         <div className="hero-content relative z-10 max-w-2xl">
           <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-9 bg-[#2878ff]" />
@@ -38,34 +34,36 @@ export default function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-2xl font-semibold leading-[1.15] tracking-[-0.03em] text-[#68a0ff] sm:text-3xl lg:text-[2.6rem]">
-            Conecto tu oportunidad con posibles compradores e inversionistas
-            en Colombia.
+            Conecto oportunidades con posibles compradores, vendedores e
+            inversionistas en Colombia.
           </p>
 
           <p className="mt-7 max-w-xl text-base leading-7 text-white/55 sm:text-lg">
-            Inmuebles · Empresas · Vehículos · Maquinaria · Franquicias ·
-            Negocios · Inventarios
+            Empresas · Inmuebles · Maquinaria · Franquicias · Vehículos ·
+            Inventarios · Proyectos
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="#contacto"
-              onClick={() => selectAction("Vender")}
+            <Link
+              href="/comprar"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#1668ff] px-8 py-3 text-sm font-semibold uppercase tracking-[0.04em] text-white transition duration-300 hover:bg-[#347cff]"
             >
-              Quiero vender
-            </a>
-
-            <a
-              href="#contacto"
-              onClick={() => selectAction("Comprar")}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/15 bg-white/[0.02] px-8 py-3 text-sm font-semibold uppercase tracking-[0.04em] text-white transition duration-300 hover:border-[#2878ff]/50 hover:bg-[#2878ff]/10"
-            >
               Quiero comprar
-            </a>
+            </Link>
+
+            <Link
+              href="/vender"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 px-8 py-3 text-sm font-semibold uppercase tracking-[0.04em] text-[#f0d16c] transition duration-300 hover:border-[#d4af37]/60 hover:bg-[#d4af37]/15"
+            >
+              Quiero vender
+            </Link>
           </div>
 
-          <div className="mt-9 border-t border-white/10 pt-5">
+          <p className="mt-5 text-sm leading-6 text-white/40">
+            Elige una opción y te explico cómo puedo ayudarte según tu objetivo.
+          </p>
+
+          <div className="mt-8 border-t border-white/10 pt-5">
             <p className="text-sm font-semibold text-white">
               David Aldana
             </p>
@@ -76,7 +74,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Imagen */}
         <div className="hero-image relative z-10 mx-auto w-full max-w-[560px]">
           <div
             aria-hidden="true"

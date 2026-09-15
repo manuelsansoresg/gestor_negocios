@@ -11,16 +11,22 @@ const navItems = [
     href: "/#inicio",
   },
   {
+    label: "Comprar",
+    href: "/comprar",
+    accent: "blue",
+  },
+  {
+    label: "Vender",
+    href: "/vender",
+    accent: "gold",
+  },
+  {
     label: "Quién soy",
     href: "/conoceme",
   },
   {
     label: "Servicios",
     href: "/servicios",
-  },
-  {
-    label: "Cómo trabajo",
-    href: "/#como-trabajo",
   },
   {
     label: "Contacto",
@@ -30,24 +36,84 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] =
-    useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function goToContact(event: MouseEvent<HTMLAnchorElement>) {
     setIsOpen(false);
+
     if (pathname !== "/") return;
+
     const contact = document.getElementById("contacto");
+
     if (!contact) return;
+
     event.preventDefault();
-    contact.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    contact.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+
     window.history.pushState(null, "", "#contacto");
+  }
+
+  function getNavClass(
+    href: string,
+    accent?: "blue" | "gold"
+  ) {
+    const active =
+      pathname === href ||
+      (href !== "/" &&
+        href !== "/#inicio" &&
+        href !== "/#contacto" &&
+        pathname.startsWith(href));
+
+    if (accent === "blue") {
+      return `
+        text-sm
+        font-semibold
+        transition
+        ${
+          active
+            ? "text-[#68a0ff]"
+            : "text-[#68a0ff]/80 hover:text-[#8bb7ff]"
+        }
+      `;
+    }
+
+    if (accent === "gold") {
+      return `
+        text-sm
+        font-semibold
+        transition
+        ${
+          active
+            ? "text-[#f0d16c]"
+            : "text-[#d4af37]/85 hover:text-[#f0d16c]"
+        }
+      `;
+    }
+
+    return `
+      text-sm
+      font-medium
+      transition
+      ${
+        active
+          ? "text-white"
+          : "text-white/60 hover:text-white"
+      }
+    `;
   }
 
   return (
     <header
       className="
-        sticky top-0 z-50
-        border-b border-white/10
+        sticky
+        top-0
+        z-50
+        border-b
+        border-white/10
         bg-[#05070b]/95
         text-white
         backdrop-blur-xl
@@ -56,7 +122,8 @@ export default function Header() {
       <div
         className="
           mx-auto
-          flex h-[78px]
+          flex
+          h-[78px]
           max-w-7xl
           items-center
           justify-between
@@ -65,7 +132,7 @@ export default function Header() {
           lg:px-12
         "
       >
-        {/* Marca */}
+        {/* MARCA */}
         <Link
           href="/#inicio"
           aria-label="Ir al inicio"
@@ -73,7 +140,8 @@ export default function Header() {
         >
           <div
             className="
-              h-14 w-14
+              h-14
+              w-14
               shrink-0
               overflow-hidden
               rounded-xl
@@ -85,11 +153,8 @@ export default function Header() {
               alt=""
               width={56}
               height={56}
-              className="
-                h-full w-full
-                object-cover
-              "
               priority
+              className="h-full w-full object-cover"
             />
           </div>
 
@@ -119,13 +184,13 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* Menú desktop */}
+        {/* MENÚ DESKTOP */}
         <nav
           aria-label="Navegación principal"
           className="
             hidden
             items-center
-            gap-7
+            gap-6
             lg:flex
           "
         >
@@ -133,20 +198,17 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="
-                text-sm
-                font-medium
-                text-white/60
-                transition
-                hover:text-white
-              "
+              className={getNavClass(
+                item.href,
+                item.accent as "blue" | "gold" | undefined
+              )}
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* CTA desktop */}
+        {/* CTA DESKTOP */}
         <div className="hidden lg:block">
           <Link
             href="/#contacto"
@@ -167,16 +229,14 @@ export default function Header() {
               hover:bg-[#347cff]
             "
           >
-            Consultar una oportunidad
+            Hablemos
           </Link>
         </div>
 
-        {/* Botón móvil */}
+        {/* BOTÓN MENÚ MÓVIL */}
         <button
           type="button"
-          onClick={() =>
-            setIsOpen(!isOpen)
-          }
+          onClick={() => setIsOpen(!isOpen)}
           aria-label={
             isOpen
               ? "Cerrar menú"
@@ -185,7 +245,9 @@ export default function Header() {
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
           className="
-            flex h-11 w-11
+            flex
+            h-11
+            w-11
             items-center
             justify-center
             rounded-xl
@@ -199,8 +261,10 @@ export default function Header() {
             <span
               className={`
                 absolute
-                left-0 top-1
-                h-[2px] w-5
+                left-0
+                top-1
+                h-[2px]
+                w-5
                 bg-white
                 transition-all
                 duration-300
@@ -217,7 +281,8 @@ export default function Header() {
                 absolute
                 left-0
                 top-[9px]
-                h-[2px] w-5
+                h-[2px]
+                w-5
                 bg-white
                 transition-all
                 duration-300
@@ -234,7 +299,8 @@ export default function Header() {
                 absolute
                 left-0
                 top-[15px]
-                h-[2px] w-5
+                h-[2px]
+                w-5
                 bg-white
                 transition-all
                 duration-300
@@ -249,7 +315,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Menú móvil */}
+      {/* MENÚ MÓVIL */}
       <div
         id="mobile-navigation"
         aria-hidden={!isOpen}
@@ -264,7 +330,7 @@ export default function Header() {
           lg:hidden
           ${
             isOpen
-              ? "max-h-[500px] opacity-100"
+              ? "max-h-[600px] opacity-100"
               : "max-h-0 border-transparent opacity-0"
           }
         `}
@@ -273,39 +339,60 @@ export default function Header() {
           aria-label="Navegación móvil"
           className="
             mx-auto
-            flex max-w-7xl
+            flex
+            max-w-7xl
             flex-col
-            px-6 py-5
+            px-6
+            py-5
           "
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              onClick={() =>
-                setIsOpen(false)
-              }
-              className="
-                border-b
-                border-white/[0.06]
-                py-4
-                text-base
-                font-medium
-                text-white/70
-                transition
-                hover:text-white
-              "
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isBuy = item.label === "Comprar";
+            const isSell = item.label === "Vender";
+
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`
+                  border-b
+                  border-white/[0.06]
+                  py-4
+                  text-base
+                  transition
+
+                  ${
+                    isBuy
+                      ? "font-semibold text-[#68a0ff]"
+                      : ""
+                  }
+
+                  ${
+                    isSell
+                      ? "font-semibold text-[#f0d16c]"
+                      : ""
+                  }
+
+                  ${
+                    !isBuy && !isSell
+                      ? "font-medium text-white/70 hover:text-white"
+                      : ""
+                  }
+                `}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
 
           <Link
             href="/#contacto"
             onClick={goToContact}
             className="
               mt-5
-              flex min-h-12
+              flex
+              min-h-12
               items-center
               justify-center
               rounded-full
@@ -316,7 +403,7 @@ export default function Header() {
               text-white
             "
           >
-            Consultar una oportunidad
+            Hablemos
           </Link>
         </nav>
       </div>
