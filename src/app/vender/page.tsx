@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import IntentLanding from "@/components/landing/IntentLanding";
 
 export const metadata: Metadata = {
@@ -54,20 +55,35 @@ const steps = [
 
 export default function Page() {
   return (
-    <IntentLanding
-      action="Vender"
-      eyebrow="Vender · Colombia"
-      title="¿Quieres vender una empresa, inmueble u otra oportunidad?"
-      description="Te ayudo a organizar la oportunidad, presentarla ante posibles interesados y mantener el seguimiento comercial durante el proceso."
-      highlight="Cuéntame qué quieres vender y revisamos cómo presentar la oportunidad."
-      categories={categories}
-      steps={steps}
-      sectionTitle="¿Qué tipo de oportunidad quieres vender?"
-      sectionDescription="Puedo gestionar distintos tipos de activos y oportunidades comerciales, siempre dentro del alcance acordado."
-      formTitle="Cuéntame sobre tu oportunidad"
-      formDescription="Completa la información inicial para conocer qué quieres vender y determinar cómo puedo ayudarte."
-      source="vender"
-      whatsappMessage="Hola David, quiero vender una oportunidad y quisiera contarte más detalles."
-    />
+    <>
+      <IntentLanding
+        action="Vender"
+        eyebrow="Vender · Colombia"
+        title="¿Quieres vender una empresa, inmueble u otra oportunidad?"
+        description="Te ayudo a organizar la oportunidad, presentarla ante posibles interesados y mantener el seguimiento comercial durante el proceso."
+        highlight="Cuéntame qué quieres vender y revisamos cómo presentar la oportunidad."
+        categories={categories}
+        steps={steps}
+        sectionTitle="¿Qué tipo de oportunidad quieres vender?"
+        sectionDescription="Puedo gestionar distintos tipos de activos y oportunidades comerciales, siempre dentro del alcance acordado."
+        formTitle="Cuéntame sobre tu oportunidad"
+        formDescription="Completa la información inicial para conocer qué quieres vender y determinar cómo puedo ayudarte."
+        source="vender"
+        whatsappMessage="Hola David, quiero vender una oportunidad y quisiera contarte más detalles."
+      />
+      {/* Google tag (gtag.js) — solo para /vender */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-86WTT35QHG"
+        strategy="afterInteractive"
+      />
+      <Script id="google-tag-vender" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-86WTT35QHG');
+        `}
+      </Script>
+    </>
   );
 }
