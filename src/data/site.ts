@@ -7,7 +7,7 @@ export const site = {
   description:
     "David Aldana conecta vendedores, compradores e inversionistas en negocios, empresas, inmuebles, maquinaria, vehículos y franquicias en Colombia.",
   phone: "+573053971539",
-  email: "davidaldana97@hotmail.com",
+  email: "administrador@gestordenegocios.com",
   location: {
     country: "Colombia",
   },

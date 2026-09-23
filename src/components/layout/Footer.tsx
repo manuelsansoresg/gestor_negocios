@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { site } from "@/data/site";
 
 export default function Footer() {
   return (
@@ -38,6 +39,13 @@ export default function Footer() {
             <p className="mt-1 text-sm text-white/50">
               Colombia
             </p>
+
+            <a
+              href={`mailto:${site.email}`}
+              className="mt-2 block text-sm text-white/70 transition hover:text-[#68a0ff]"
+            >
+              {site.email}
+            </a>
           </div>
         </div>
 
